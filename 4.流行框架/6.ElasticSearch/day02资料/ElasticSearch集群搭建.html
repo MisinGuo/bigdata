@@ -1,0 +1,2418 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ElasticSearch集群搭建 · 《BIG DATA》</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="黑马程序员吧">
+        <meta name="identifier" content="图书编号有啥用" scheme="ISBN">
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-sidebar-style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-change_girls/girls.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="数据准备.html" />
+    
+    
+
+    
+        <link rel="shortcut icon" href='../../../fav/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../../fav/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../../fav/apple-touch-icon.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../fav/apple-touch-icon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../fav/apple-touch-icon-180x180.png">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    1.JAVA基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../../1.JAVA基础/day01-java基础语法.html">
+            
+                <a href="../../../1.JAVA基础/day01-java基础语法.html">
+            
+                    
+                    day01-java基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../../1.JAVA基础/day02-Java基础语法.html">
+            
+                <a href="../../../1.JAVA基础/day02-Java基础语法.html">
+            
+                    
+                    day02-Java基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../../1.JAVA基础/day03 switch&循环语句.html">
+            
+                <a href="../../../1.JAVA基础/day03 switch&循环语句.html">
+            
+                    
+                    day03 switch&循环语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../../1.JAVA基础/day04 IDEA&数组.html">
+            
+                <a href="../../../1.JAVA基础/day04 IDEA&数组.html">
+            
+                    
+                    day04 IDEA&数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../../1.JAVA基础/day05 方法.html">
+            
+                <a href="../../../1.JAVA基础/day05 方法.html">
+            
+                    
+                    day05 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../../1.JAVA基础/day06 Debug&基础练习.html">
+            
+                <a href="../../../1.JAVA基础/day06 Debug&基础练习.html">
+            
+                    
+                    day06 Debug&基础练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../../1.JAVA基础/day07 面向对象.html">
+            
+                <a href="../../../1.JAVA基础/day07 面向对象.html">
+            
+                    
+                    day07 面向对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../../1.JAVA基础/day08 常用API.html">
+            
+                <a href="../../../1.JAVA基础/day08 常用API.html">
+            
+                    
+                    day08 常用API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../../../1.JAVA基础/day09 ArrayList集合&学生管理系统.html">
+            
+                <a href="../../../1.JAVA基础/day09 ArrayList集合&学生管理系统.html">
+            
+                    
+                    day09 ArrayList集合&学生管理系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../../../1.JAVA基础/day10Git.html">
+            
+                <a href="../../../1.JAVA基础/day10Git.html">
+            
+                    
+                    Day 10 Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../../../1.JAVA基础/day11-分类和static.html">
+            
+                <a href="../../../1.JAVA基础/day11-分类和static.html">
+            
+                    
+                    day11-分类和static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../../../1.JAVA基础/day12-继承.html">
+            
+                <a href="../../../1.JAVA基础/day12-继承.html">
+            
+                    
+                    day12-继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../../../1.JAVA基础/day13-接口和内部类.html">
+            
+                <a href="../../../1.JAVA基础/day13-接口和内部类.html">
+            
+                    
+                    day13-接口和内部类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../../../1.JAVA基础/day14-常用API01.html">
+            
+                <a href="../../../1.JAVA基础/day14-常用API01.html">
+            
+                    
+                    day14-常用API01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../../../1.JAVA基础/day15-常用API02.html">
+            
+                <a href="../../../1.JAVA基础/day15-常用API02.html">
+            
+                    
+                    day15-常用API02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../../../1.JAVA基础/day16集合01.html">
+            
+                <a href="../../../1.JAVA基础/day16集合01.html">
+            
+                    
+                    day16集合01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../../../1.JAVA基础/day17集合02.html">
+            
+                <a href="../../../1.JAVA基础/day17集合02.html">
+            
+                    
+                    day17集合02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../../../1.JAVA基础/day18集合03.html">
+            
+                <a href="../../../1.JAVA基础/day18集合03.html">
+            
+                    
+                    day18集合03
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="../../../1.JAVA基础/day19IO流01.html">
+            
+                <a href="../../../1.JAVA基础/day19IO流01.html">
+            
+                    
+                    day19IO流01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="../../../1.JAVA基础/day20IO流02.html">
+            
+                <a href="../../../1.JAVA基础/day20IO流02.html">
+            
+                    
+                    day20IO流02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="../../../1.JAVA基础/day21-多线程01.html">
+            
+                <a href="../../../1.JAVA基础/day21-多线程01.html">
+            
+                    
+                    day21-多线程01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="../../../1.JAVA基础/day22 多线程02.html">
+            
+                <a href="../../../1.JAVA基础/day22 多线程02.html">
+            
+                    
+                    day22 多线程02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="../../../1.JAVA基础/day23-网络编程01.html">
+            
+                <a href="../../../1.JAVA基础/day23-网络编程01.html">
+            
+                    
+                    day23-网络编程01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="../../../1.JAVA基础/day24-网络编程02.html">
+            
+                <a href="../../../1.JAVA基础/day24-网络编程02.html">
+            
+                    
+                    day24-网络编程02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.25" data-path="../../../1.JAVA基础/day25-基础加强01.html">
+            
+                <a href="../../../1.JAVA基础/day25-基础加强01.html">
+            
+                    
+                    day25-基础加强01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.26" data-path="../../../1.JAVA基础/day26-基础加强02.html">
+            
+                <a href="../../../1.JAVA基础/day26-基础加强02.html">
+            
+                    
+                    day26-基础加强02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.27" data-path="../../../1.JAVA基础/day27-基础加强03.html">
+            
+                <a href="../../../1.JAVA基础/day27-基础加强03.html">
+            
+                    
+                    day27-基础加强03
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    2.JavaWeb
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    1.Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../../2.JavaWeb/1.Linux/Linux-01.html">
+            
+                <a href="../../../2.JavaWeb/1.Linux/Linux-01.html">
+            
+                    
+                    Linux 01 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../../2.JavaWeb/1.Linux/Linux-01-1.html">
+            
+                <a href="../../../2.JavaWeb/1.Linux/Linux-01-1.html">
+            
+                    
+                    Linux 01
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    10.Vue+Element
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../../2.JavaWeb/10.Vue+Element/Vue和Element.html">
+            
+                <a href="../../../2.JavaWeb/10.Vue+Element/Vue和Element.html">
+            
+                    
+                    Vue和Element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../../2.JavaWeb/10.Vue+Element/Vue和综合案例.html">
+            
+                <a href="../../../2.JavaWeb/10.Vue+Element/Vue和综合案例.html">
+            
+                    
+                    Vue和综合案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    11.Redis
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../../../2.JavaWeb/11.Redis/Redis.html">
+            
+                <a href="../../../2.JavaWeb/11.Redis/Redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" >
+            
+                <span>
+            
+                    
+                    12.Maven
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../../../2.JavaWeb/12.Maven/Maven基础.html">
+            
+                <a href="../../../2.JavaWeb/12.Maven/Maven基础.html">
+            
+                    
+                    Maven基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" >
+            
+                <span>
+            
+                    
+                    2.HTML+CSS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../../../2.JavaWeb/2.HTML+CSS/JavaEE-Css+Nginx.html">
+            
+                <a href="../../../2.JavaWeb/2.HTML+CSS/JavaEE-Css+Nginx.html">
+            
+                    
+                    Java EE Css Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../../../2.JavaWeb/2.HTML+CSS/JavaEE-HTML.html">
+            
+                <a href="../../../2.JavaWeb/2.HTML+CSS/JavaEE-HTML.html">
+            
+                    
+                    Java EE HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" >
+            
+                <span>
+            
+                    
+                    3.JavaWeb核心
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../../../2.JavaWeb/3.JavaWeb核心/1.Tomcat&Http协议-授课.html">
+            
+                <a href="../../../2.JavaWeb/3.JavaWeb核心/1.Tomcat&Http协议-授课.html">
+            
+                    
+                    1.Tomcat&Http协议-授课
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="../../../2.JavaWeb/3.JavaWeb核心/2.Servlet-授课.html">
+            
+                <a href="../../../2.JavaWeb/3.JavaWeb核心/2.Servlet-授课.html">
+            
+                    
+                    2.Servlet-授课
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.3" data-path="../../../2.JavaWeb/3.JavaWeb核心/3.Request&Response-授课.html">
+            
+                <a href="../../../2.JavaWeb/3.JavaWeb核心/3.Request&Response-授课.html">
+            
+                    
+                    3.Request&Response-授课
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.4" data-path="../../../2.JavaWeb/3.JavaWeb核心/4.Cookie&SessionJsp-授课.html">
+            
+                <a href="../../../2.JavaWeb/3.JavaWeb核心/4.Cookie&SessionJsp-授课.html">
+            
+                    
+                    4.Cookie&SessionJsp-授课
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.5" data-path="../../../2.JavaWeb/3.JavaWeb核心/5.EL&Filter&Listener-授课.html">
+            
+                <a href="../../../2.JavaWeb/3.JavaWeb核心/5.EL&Filter&Listener-授课.html">
+            
+                    
+                    5.EL&Filter&Listener-授课
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" >
+            
+                <span>
+            
+                    
+                    4.mysql
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="../../../2.JavaWeb/4.mysql/MySQL基础-01-授课笔记.html">
+            
+                <a href="../../../2.JavaWeb/4.mysql/MySQL基础-01-授课笔记.html">
+            
+                    
+                    MySQL基础-01-授课笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="../../../2.JavaWeb/4.mysql/MySQL进阶-02-授课笔记.html">
+            
+                <a href="../../../2.JavaWeb/4.mysql/MySQL进阶-02-授课笔记.html">
+            
+                    
+                    MySQL进阶-02-授课笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.3" data-path="../../../2.JavaWeb/4.mysql/MySQL高级-03-授课笔记.html">
+            
+                <a href="../../../2.JavaWeb/4.mysql/MySQL高级-03-授课笔记.html">
+            
+                    
+                    MySQL高级-03-授课笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.4" data-path="../../../2.JavaWeb/4.mysql/MySQL高级-04-授课笔记.html">
+            
+                <a href="../../../2.JavaWeb/4.mysql/MySQL高级-04-授课笔记.html">
+            
+                    
+                    MySQL高级-04-授课笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" >
+            
+                <span>
+            
+                    
+                    5.JDBC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.8.1" data-path="../../../2.JavaWeb/5.JDBC/JDBC-01-授课笔记.html">
+            
+                <a href="../../../2.JavaWeb/5.JDBC/JDBC-01-授课笔记.html">
+            
+                    
+                    JDBC-01-授课笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.2" data-path="../../../2.JavaWeb/5.JDBC/JDBC-02-授课笔记.html">
+            
+                <a href="../../../2.JavaWeb/5.JDBC/JDBC-02-授课笔记.html">
+            
+                    
+                    JDBC-02-授课笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" >
+            
+                <span>
+            
+                    
+                    6.Mybatis
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.9.1" data-path="../../../2.JavaWeb/6.Mybatis/mybatis-day01.html">
+            
+                <a href="../../../2.JavaWeb/6.Mybatis/mybatis-day01.html">
+            
+                    
+                    Mybatis Day 01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.2" data-path="../../../2.JavaWeb/6.Mybatis/mybatis-day02.html">
+            
+                <a href="../../../2.JavaWeb/6.Mybatis/mybatis-day02.html">
+            
+                    
+                    Mybatis Day 02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.3" data-path="../../../2.JavaWeb/6.Mybatis/mybatis-day03.html">
+            
+                <a href="../../../2.JavaWeb/6.Mybatis/mybatis-day03.html">
+            
+                    
+                    Mybatis Day 03
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" >
+            
+                <span>
+            
+                    
+                    7.JavaScript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.10.1" data-path="../../../2.JavaWeb/7.JavaScript/JavaScript基础.html">
+            
+                <a href="../../../2.JavaWeb/7.JavaScript/JavaScript基础.html">
+            
+                    
+                    JavaScript基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.2" data-path="../../../2.JavaWeb/7.JavaScript/JavaScript高级.html">
+            
+                <a href="../../../2.JavaWeb/7.JavaScript/JavaScript高级.html">
+            
+                    
+                    JavaScript高级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.3" data-path="../../../2.JavaWeb/7.JavaScript/尚硅谷_陈鑫_第二章_JavaScript&正则表达式.html">
+            
+                <a href="../../../2.JavaWeb/7.JavaScript/尚硅谷_陈鑫_第二章_JavaScript&正则表达式.html">
+            
+                    
+                    尚硅谷陈鑫第二章_JavaScript&正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" >
+            
+                <span>
+            
+                    
+                    8.Jquery
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.11.1" data-path="../../../2.JavaWeb/8.Jquery/JQuery.html">
+            
+                <a href="../../../2.JavaWeb/8.Jquery/JQuery.html">
+            
+                    
+                    J Query
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" >
+            
+                <span>
+            
+                    
+                    9.AJAX
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.12.1" data-path="../../../2.JavaWeb/9.AJAX/AJAX.html">
+            
+                <a href="../../../2.JavaWeb/9.AJAX/AJAX.html">
+            
+                    
+                    AJAX
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" >
+            
+                <span>
+            
+                    
+                    Web综合案例
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.13.1" data-path="../../../2.JavaWeb/Web综合案例/web综合案例-day01.html">
+            
+                <a href="../../../2.JavaWeb/Web综合案例/web综合案例-day01.html">
+            
+                    
+                    web综合案例-day01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13.2" data-path="../../../2.JavaWeb/Web综合案例/web综合案例-day02.html">
+            
+                <a href="../../../2.JavaWeb/Web综合案例/web综合案例-day02.html">
+            
+                    
+                    web综合案例-day02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13.3" data-path="../../../2.JavaWeb/Web综合案例/web综合案例-day03.html">
+            
+                <a href="../../../2.JavaWeb/Web综合案例/web综合案例-day03.html">
+            
+                    
+                    web综合案例-day03
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13.4" data-path="../../../2.JavaWeb/Web综合案例/web综合案例-day04.html">
+            
+                <a href="../../../2.JavaWeb/Web综合案例/web综合案例-day04.html">
+            
+                    
+                    web综合案例-day04
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13.5" data-path="../../../2.JavaWeb/Web综合案例/web综合案例-day05.html">
+            
+                <a href="../../../2.JavaWeb/Web综合案例/web综合案例-day05.html">
+            
+                    
+                    web综合案例-day05
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    3.主流框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    1.spring
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../../3.主流框架/1.spring/Spring-day01.html">
+            
+                <a href="../../../3.主流框架/1.spring/Spring-day01.html">
+            
+                    
+                    Spring Day 01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../../3.主流框架/1.spring/Spring-day02.html">
+            
+                <a href="../../../3.主流框架/1.spring/Spring-day02.html">
+            
+                    
+                    Spring Day 02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../../../3.主流框架/1.spring/Spring-day03.html">
+            
+                <a href="../../../3.主流框架/1.spring/Spring-day03.html">
+            
+                    
+                    Spring Day 03
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../../../3.主流框架/1.spring/spring-day04.html">
+            
+                <a href="../../../3.主流框架/1.spring/spring-day04.html">
+            
+                    
+                    Spring Day 04
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    2.springMVC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../../3.主流框架/2.springMVC/day01.html">
+            
+                <a href="../../../3.主流框架/2.springMVC/day01.html">
+            
+                    
+                    Day 01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../../../3.主流框架/2.springMVC/day02.html">
+            
+                <a href="../../../3.主流框架/2.springMVC/day02.html">
+            
+                    
+                    Day 02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../../../3.主流框架/2.springMVC/day03.html">
+            
+                <a href="../../../3.主流框架/2.springMVC/day03.html">
+            
+                    
+                    Day 03
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    3.Maven高级
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../../3.主流框架/3.Maven高级/Maven高级.html">
+            
+                <a href="../../../3.主流框架/3.Maven高级/Maven高级.html">
+            
+                    
+                    Maven高级
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    4.Dubbo
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../../3.主流框架/4.Dubbo/Dubbo.html">
+            
+                <a href="../../../3.主流框架/4.Dubbo/Dubbo.html">
+            
+                    
+                    Dubbo
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" >
+            
+                <span>
+            
+                    
+                    5.Zookeeper
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../../../3.主流框架/5.Zookeeper/zookeeper讲义md.html">
+            
+                <a href="../../../3.主流框架/5.Zookeeper/zookeeper讲义md.html">
+            
+                    
+                    zookeeper讲义md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    4.流行框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    1.Redis高级
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../../1.Redis高级/第二章 Redis高级.html">
+            
+                <a href="../../1.Redis高级/第二章 Redis高级.html">
+            
+                    
+                    第二章 Redis高级
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    2.spring boot
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../2.spring boot/01-Springboot-day01.html">
+            
+                <a href="../../2.spring boot/01-Springboot-day01.html">
+            
+                    
+                    01 Springboot Day 01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../2.spring boot/02-SpringBoot高级.html">
+            
+                <a href="../../2.spring boot/02-SpringBoot高级.html">
+            
+                    
+                    02-SpringBoot高级
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    4.RabbitMQ
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../../4.RabbitMQ/RabbitMQ 讲义.html">
+            
+                <a href="../../4.RabbitMQ/RabbitMQ 讲义.html">
+            
+                    
+                    RabbitMQ 讲义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../../4.RabbitMQ/RabbitMQ安装说明文档.html">
+            
+                <a href="../../4.RabbitMQ/RabbitMQ安装说明文档.html">
+            
+                    
+                    RabbitMQ安装说明文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../../4.RabbitMQ/RabbitMQ集群搭建.html">
+            
+                <a href="../../4.RabbitMQ/RabbitMQ集群搭建.html">
+            
+                    
+                    RabbitMQ集群搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" >
+            
+                <span>
+            
+                    
+                    5.docker
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.4.1" data-path="../../5.docker/docker 私有仓库.html">
+            
+                <a href="../../5.docker/docker 私有仓库.html">
+            
+                    
+                    docker 私有仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.2" data-path="../../5.docker/docker-compose.html">
+            
+                <a href="../../5.docker/docker-compose.html">
+            
+                    
+                    Docker Compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.3" data-path="../../5.docker/dockerfile.html">
+            
+                <a href="../../5.docker/dockerfile.html">
+            
+                    
+                    Dockerfile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.4" data-path="../../5.docker/docker应用部署.html">
+            
+                <a href="../../5.docker/docker应用部署.html">
+            
+                    
+                    docker应用部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.5" data-path="../../5.docker/安装docker.html">
+            
+                <a href="../../5.docker/安装docker.html">
+            
+                    
+                    安装docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" >
+            
+                <span>
+            
+                    
+                    6.ElasticSearch
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1" >
+            
+                <span>
+            
+                    
+                    day01资料
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1.1" data-path="../day01资料/Elasticsearch 安装.html">
+            
+                <a href="../day01资料/Elasticsearch 安装.html">
+            
+                    
+                    Elasticsearch 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.1.2" data-path="../day01资料/ik分词器安装.html">
+            
+                <a href="../day01资料/ik分词器安装.html">
+            
+                    
+                    ik分词器安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.2" >
+            
+                <span>
+            
+                    
+                    day02资料
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.5.2.1" data-path="ElasticSearch集群搭建.html">
+            
+                <a href="ElasticSearch集群搭建.html">
+            
+                    
+                    ElasticSearch集群搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.2.2" data-path="数据准备.html">
+            
+                <a href="数据准备.html">
+            
+                    
+                    数据准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.2.3" data-path="脚本.html">
+            
+                <a href="脚本.html">
+            
+                    
+                    脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.3" data-path="../1.Elasticsearch.html">
+            
+                <a href="../1.Elasticsearch.html">
+            
+                    
+                    1.Elasticsearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.4" data-path="../ElasticSearch-2.html">
+            
+                <a href="../ElasticSearch-2.html">
+            
+                    
+                    Elastic Search 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    5.大数据基础增强
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    1.Linux实战
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../../5.大数据基础增强/1.Linux实战/day01/day01.html">
+            
+                <a href="../../../5.大数据基础增强/1.Linux实战/day01/day01.html">
+            
+                    
+                    Day 01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../../../5.大数据基础增强/1.Linux实战/day02_打包压缩_vim编辑器_系统管理_用户权限/day02.html">
+            
+                <a href="../../../5.大数据基础增强/1.Linux实战/day02_打包压缩_vim编辑器_系统管理_用户权限/day02.html">
+            
+                    
+                    Day 02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../../../5.大数据基础增强/1.Linux实战/day03/day03.html">
+            
+                <a href="../../../5.大数据基础增强/1.Linux实战/day03/day03.html">
+            
+                    
+                    Day 03
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    Tips
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../../Windows文件批量重命名.html">
+            
+                <a href="../../../Windows文件批量重命名.html">
+            
+                    
+                    Windows文件批量重命名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../../nopay_over_wall.html">
+            
+                <a href="../../../nopay_over_wall.html">
+            
+                    
+                    YOU CAN TRY IT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >ElasticSearch集群搭建</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x4E00;&#x3001;elasticsearch-&#x96C6;&#x7FA4;"><b>1. </b>&#x4E00;&#x3001;ElasticSearch &#x96C6;&#x7FA4;</a></li><ul><li><span class="title-icon "></span><a href="#11-&#x642D;&#x5EFA;&#x96C6;&#x7FA4;"><b>1.1. </b>1.1 &#x642D;&#x5EFA;&#x96C6;&#x7FA4;</a></li><li><span class="title-icon "></span><a href="#12--&#x4F7F;&#x7528;kibana&#x914D;&#x7F6E;&#x548C;&#x7BA1;&#x7406;&#x96C6;&#x7FA4;"><b>1.2. </b>1.2  &#x4F7F;&#x7528;Kibana&#x914D;&#x7F6E;&#x548C;&#x7BA1;&#x7406;&#x96C6;&#x7FA4;</a></li></ul></ul></div><h1 id="&#x4E00;&#x3001;elasticsearch-&#x96C6;&#x7FA4;"><a name="&#x4E00;&#x3001;elasticsearch-&#x96C6;&#x7FA4;" class="anchor-navigation-ex-anchor" href="#&#x4E00;&#x3001;elasticsearch-&#x96C6;&#x7FA4;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x4E00;&#x3001;ElasticSearch &#x96C6;&#x7FA4;</h1>
+<h2 id="11-&#x642D;&#x5EFA;&#x96C6;&#x7FA4;"><a name="11-&#x642D;&#x5EFA;&#x96C6;&#x7FA4;" class="anchor-navigation-ex-anchor" href="#11-&#x642D;&#x5EFA;&#x96C6;&#x7FA4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. 1.1 &#x642D;&#x5EFA;&#x96C6;&#x7FA4;</h2>
+<p>Elasticsearch&#x5982;&#x679C;&#x505A;&#x96C6;&#x7FA4;&#x7684;&#x8BDD;Master&#x8282;&#x70B9;&#x81F3;&#x5C11;&#x4E09;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x6216;&#x8005;&#x4E09;&#x4E2A;Master&#x5B9E;&#x4F8B;&#x52A0;&#x5165;&#x76F8;&#x540C;&#x96C6;&#x7FA4;&#xFF0C;&#x4E09;&#x4E2A;Master&#x8282;&#x70B9;&#x6700;&#x591A;&#x53EA;&#x80FD;&#x6545;&#x969C;&#x4E00;&#x53F0;Master&#x8282;&#x70B9;&#xFF0C;&#x5982;&#x679C;&#x6545;&#x969C;&#x4E24;&#x4E2A;Master&#x8282;&#x70B9;&#xFF0C;Elasticsearch&#x5C06;&#x65E0;&#x6CD5;&#x7EC4;&#x6210;&#x96C6;&#x7FA4;.&#x4F1A;&#x62A5;&#x9519;&#xFF0C;Kibana&#x4E5F;&#x65E0;&#x6CD5;&#x542F;&#x52A8;&#xFF0C;&#x56E0;&#x4E3A;Kibana&#x65E0;&#x6CD5;&#x83B7;&#x53D6;&#x96C6;&#x7FA4;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x7531;&#x4E8E;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x53EA;&#x6709;&#x4E00;&#x53F0;&#x865A;&#x62DF;&#x673A;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5728;&#x865A;&#x62DF;&#x673A;&#x4E2D;&#x5B89;&#x88C5;&#x4E09;&#x4E2A;ES&#x5B9E;&#x4F8B;&#xFF0C;&#x642D;&#x5EFA;&#x4F2A;&#x96C6;&#x7FA4;&#xFF0C;&#x800C;ES&#x542F;&#x52A8;&#x6BD4;&#x8F83;&#x8017;&#x5185;&#x5B58;&#xFF0C;&#x6240;&#x4EE5;&#x5148;&#x8BBE;&#x7F6E;&#x865A;&#x62DF;&#x673A;&#x7684;&#x5185;&#x5B58;3G&#x548C;CPU&#x4E2A;&#x6570;4&#x4E2A;</p>
+<p><a href="imgs/1575626474666.png" data-lightbox="b25794f3-f5e8-44d4-83bd-2bef4f24f204" data-title="1575626474666"><img src="imgs/1575626474666.png" alt="1575626474666"></a></p>
+<h4 id="111-&#x6574;&#x4F53;&#x6B65;&#x9AA4;"><a name="111-&#x6574;&#x4F53;&#x6B65;&#x9AA4;" class="anchor-navigation-ex-anchor" href="#111-&#x6574;&#x4F53;&#x6B65;&#x9AA4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1 &#x6574;&#x4F53;&#x6B65;&#x9AA4;</h4>
+<p>&#x6B65;&#x9AA4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li><p>&#x62F7;&#x8D1D;opt&#x76EE;&#x5F55;&#x4E0B;&#x7684;elasticsearch-7.4.0&#x5B89;&#x88C5;&#x5305;3&#x4E2A;&#xFF0C;&#x5206;&#x522B;&#x547D;&#x540D;&#xFF1A;</p>
+<p>elasticsearch-7.4.0-itcast1</p>
+<p>elasticsearch-7.4.0-itcast2</p>
+<p>elasticsearch-7.4.0-itcast3 </p>
+</li>
+<li><p>&#x7136;&#x540E;&#x4FEE;&#x6539;elasticsearch.yml&#x6587;&#x4EF6;&#x4EF6;&#x3002; </p>
+</li>
+<li><p>&#x7136;&#x540E;&#x542F;&#x52A8;&#x542F;&#x52A8;itcast1&#x3001;itcast2&#x3001;itcast3&#x4E09;&#x4E2A;&#x8282;&#x70B9;&#x3002; </p>
+</li>
+<li><p>&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x2F0A;&#xFF1A;<a href="http://192.168.149.135:9200/_cat/health?v" target="_blank">http://192.168.149.135:9200/_cat/health?v</a> ,&#x5982;&#x679C;&#x8FD4;&#x56DE;&#x7684;node.total&#x662F;3&#xFF0C;&#x4EE3;&#x8868;&#x96C6; &#x7FA4;&#x642D;&#x5EFA;&#x6210;&#x529F;</p>
+</li>
+</ul>
+<p><strong>&#x5728;&#x6B64;&#xFF0C;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x7279;&#x522B;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x50CF;&#x672C;&#x6587;&#x8FD9;&#x6837;&#x5355;&#x670D;&#x52A1;&#x5668;&#x591A;&#x8282;&#x70B9;&#xFF08; 3 &#x4E2A;&#x8282;&#x70B9;&#xFF09;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x4EC5;&#x4F9B;&#x6D4B;&#x8BD5;&#x4F7F;&#x7528;</strong>&#xFF0C;&#x96C6;&#x7FA4;&#x73AF;&#x5883;&#x5982;&#x4E0B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cluster name</td>
+<td>node name</td>
+<td>IP Addr</td>
+<td>http&#x7AEF;&#x53E3;  / &#x901A;&#x4FE1;&#x7AEF;&#x53E3;</td>
+</tr>
+<tr>
+<td>itcast-es</td>
+<td>itcast1</td>
+<td>192.168.149.135</td>
+<td>9201   /  9700</td>
+</tr>
+<tr>
+<td>itcast-es</td>
+<td>itcast2</td>
+<td>192.168.149.135</td>
+<td>9202   /   9800</td>
+</tr>
+<tr>
+<td>itcast-es</td>
+<td>itcast3</td>
+<td>192.168.149.135</td>
+<td>9203   /  9900</td>
+</tr>
+</tbody>
+</table>
+<h4 id="112-&#x62F7;&#x8D1D;&#x526F;&#x672C;"><a name="112-&#x62F7;&#x8D1D;&#x526F;&#x672C;" class="anchor-navigation-ex-anchor" href="#112-&#x62F7;&#x8D1D;&#x526F;&#x672C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2 &#x62F7;&#x8D1D;&#x526F;&#x672C;</h4>
+<p>&#x62F7;&#x8D1D;opt&#x76EE;&#x5F55;&#x4E0B;&#x7684;elasticsearch-7.4.0&#x5B89;&#x88C5;&#x5305;3&#x4E2A;&#xFF0C;&#x6253;&#x5F00;&#x865A;&#x62DF;&#x673A;&#x5230;opt&#x76EE;&#x5F55;</p>
+<p>&#x6267;&#x884C; &#x62F7;&#x8D1D;&#x4E09;&#x4EFD;</p>
+<pre class="language-"><code class="lang-shell"><span class="token builtin class-name">cd</span> /opt
+<span class="token function">cp</span> <span class="token parameter variable">-r</span>  elasticsearch-7.4.0   elasticsearch-7.4.0-itcast1
+<span class="token function">cp</span> <span class="token parameter variable">-r</span>  elasticsearch-7.4.0   elasticsearch-7.4.0-itcast2
+<span class="token function">cp</span> <span class="token parameter variable">-r</span>  elasticsearch-7.4.0   elasticsearch-7.4.0-itcast3
+</code></pre>
+<h4 id="11-3-&#x4FEE;&#x6539;elasticsearchyml&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><a name="11-3-&#x4FEE;&#x6539;elasticsearchyml&#x914D;&#x7F6E;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#11-3-&#x4FEE;&#x6539;elasticsearchyml&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. 3 &#x4FEE;&#x6539;elasticsearch.yml&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h4>
+<p><strong>1)&#x3001;&#x521B;&#x5EFA;&#x65E5;&#x5FD7;&#x76EE;&#x5F55;</strong></p>
+<pre class="language-"><code class="lang-shell"><span class="token builtin class-name">cd</span> /opt
+<span class="token function">mkdir</span> logs
+<span class="token function">mkdir</span>  data
+<span class="token comment"># &#x6388;&#x6743;&#x7ED9;itheima&#x7528;&#x6237;</span>
+<span class="token function">chown</span> <span class="token parameter variable">-R</span> itheima:itheima ./logs
+<span class="token function">chown</span> <span class="token parameter variable">-R</span> itheima:itheima ./data
+
+<span class="token function">chown</span> <span class="token parameter variable">-R</span> itheima:itheima ./elasticsearch-7.4.0-itcast1
+<span class="token function">chown</span> <span class="token parameter variable">-R</span> itheima:itheima ./elasticsearch-7.4.0-itcast2
+<span class="token function">chown</span> <span class="token parameter variable">-R</span> itheima:itheima ./elasticsearch-7.4.0-itcast3
+</code></pre>
+<p>&#x6253;&#x5F00;elasticsearch.yml&#x914D;&#x7F6E;&#xFF0C;&#x5206;&#x522B;&#x914D;&#x7F6E;&#x4E0B;&#x9762;&#x4E09;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<pre class="language-"><code class="lang-shell"><span class="token function">vim</span> /opt/elasticsearch-7.4.0-itcast1/config/elasticsearch.yml 
+<span class="token function">vim</span> /opt/elasticsearch-7.4.0-itcast2/config/elasticsearch.yml 
+<span class="token function">vim</span> /opt/elasticsearch-7.4.0-itcast3/config/elasticsearch.yml
+</code></pre>
+<p><strong>2)&#x3001;&#x4E0B;&#x9762;&#x662F;elasticsearch-7.4.0-itcast1&#x914D;&#x7F6E;&#x6587;&#x4EF6;</strong></p>
+<pre class="language-"><code class="lang-yml">
+<span class="token key atrule">cluster.name</span><span class="token punctuation">:</span> itcast<span class="token punctuation">-</span>es
+<span class="token key atrule">node.name</span><span class="token punctuation">:</span> itcast<span class="token punctuation">-</span><span class="token number">1</span> 
+<span class="token key atrule">node.master</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">node.data</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">node.max_local_storage_nodes</span><span class="token punctuation">:</span> <span class="token number">3</span> 
+<span class="token key atrule">network.host</span><span class="token punctuation">:</span> 0.0.0.0
+<span class="token key atrule">http.port</span><span class="token punctuation">:</span> <span class="token number">9201</span>
+<span class="token key atrule">transport.tcp.port</span><span class="token punctuation">:</span> <span class="token number">9700</span>
+<span class="token key atrule">discovery.seed_hosts</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;localhost:9700&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;localhost:9800&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;localhost:9900&quot;</span><span class="token punctuation">]</span>
+<span class="token key atrule">cluster.initial_master_nodes</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;itcast-1&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;itcast-2&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;itcast-3&quot;</span><span class="token punctuation">]</span>
+<span class="token key atrule">path.data</span><span class="token punctuation">:</span> /opt/data
+<span class="token key atrule">path.logs</span><span class="token punctuation">:</span> /opt/logs
+</code></pre>
+<pre class="language-"><code class="lang-yml"><span class="token comment">#&#x96C6;&#x7FA4;&#x540D;&#x79F0;</span>
+<span class="token key atrule">cluster.name</span><span class="token punctuation">:</span> itcast<span class="token punctuation">-</span>es
+<span class="token comment">#&#x8282;&#x70B9;&#x540D;&#x79F0;</span>
+<span class="token key atrule">node.name</span><span class="token punctuation">:</span> itcast<span class="token punctuation">-</span><span class="token number">1</span> 
+<span class="token comment">#&#x662F;&#x4E0D;&#x662F;&#x6709;&#x8D44;&#x683C;&#x4E3B;&#x8282;&#x70B9;</span>
+<span class="token key atrule">node.master</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token comment">#&#x662F;&#x5426;&#x5B58;&#x50A8;&#x6570;&#x636E;</span>
+<span class="token key atrule">node.data</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token comment">#&#x6700;&#x5927;&#x96C6;&#x7FA4;&#x8282;&#x70B9;&#x6570;</span>
+<span class="token key atrule">node.max_local_storage_nodes</span><span class="token punctuation">:</span> <span class="token number">3</span> 
+<span class="token comment">#ip&#x5730;&#x5740;</span>
+<span class="token key atrule">network.host</span><span class="token punctuation">:</span> 0.0.0.0
+<span class="token comment">#&#x7AEF;&#x53E3;</span>
+<span class="token key atrule">http.port</span><span class="token punctuation">:</span> <span class="token number">9201</span>
+<span class="token comment">#&#x5185;&#x90E8;&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#x6C9F;&#x901A;&#x7AEF;&#x53E3;</span>
+<span class="token key atrule">transport.tcp.port</span><span class="token punctuation">:</span> <span class="token number">9700</span>
+<span class="token comment">#es7.x &#x4E4B;&#x540E;&#x65B0;&#x589E;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x8282;&#x70B9;&#x53D1;&#x73B0;</span>
+<span class="token key atrule">discovery.seed_hosts</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;localhost:9700&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;localhost:9800&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;localhost:9900&quot;</span><span class="token punctuation">]</span>
+<span class="token comment">#es7.x &#x4E4B;&#x540E;&#x65B0;&#x589E;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x96C6;&#x7FA4;&#x65F6;&#x9700;&#x8981;&#x6B64;&#x914D;&#x7F6E;&#x6765;&#x9009;&#x4E3E;master</span>
+<span class="token key atrule">cluster.initial_master_nodes</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;itcast-1&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;itcast-2&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;itcast-3&quot;</span><span class="token punctuation">]</span> 
+<span class="token comment">#&#x6570;&#x636E;&#x548C;&#x5B58;&#x50A8;&#x8DEF;&#x5F84;</span>
+<span class="token key atrule">path.data</span><span class="token punctuation">:</span> /opt/data
+<span class="token key atrule">path.logs</span><span class="token punctuation">:</span> /opt/logs
+</code></pre>
+<p><strong>3)&#x3001;&#x4E0B;&#x9762;&#x662F;elasticsearch-7.4.0-itcast2&#x914D;&#x7F6E;&#x6587;&#x4EF6;</strong></p>
+<pre class="language-"><code class="lang-yml">
+<span class="token key atrule">cluster.name</span><span class="token punctuation">:</span> itcast<span class="token punctuation">-</span>es
+<span class="token key atrule">node.name</span><span class="token punctuation">:</span> itcast<span class="token punctuation">-</span><span class="token number">2</span> 
+<span class="token key atrule">node.master</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">node.data</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">node.max_local_storage_nodes</span><span class="token punctuation">:</span> <span class="token number">3</span> 
+<span class="token key atrule">network.host</span><span class="token punctuation">:</span> 0.0.0.0
+<span class="token key atrule">http.port</span><span class="token punctuation">:</span> <span class="token number">9202</span>
+<span class="token key atrule">transport.tcp.port</span><span class="token punctuation">:</span> <span class="token number">9800</span>
+<span class="token key atrule">discovery.seed_hosts</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;localhost:9700&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;localhost:9800&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;localhost:9900&quot;</span><span class="token punctuation">]</span>
+<span class="token key atrule">cluster.initial_master_nodes</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;itcast-1&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;itcast-2&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;itcast-3&quot;</span><span class="token punctuation">]</span>
+<span class="token key atrule">path.data</span><span class="token punctuation">:</span> /opt/data
+<span class="token key atrule">path.logs</span><span class="token punctuation">:</span> /opt/logs
+</code></pre>
+<pre class="language-"><code class="lang-yml"><span class="token comment">#&#x96C6;&#x7FA4;&#x540D;&#x79F0;</span>
+<span class="token key atrule">cluster.name</span><span class="token punctuation">:</span> itcast<span class="token punctuation">-</span>es
+<span class="token comment">#&#x8282;&#x70B9;&#x540D;&#x79F0;</span>
+<span class="token key atrule">node.name</span><span class="token punctuation">:</span> itcast<span class="token punctuation">-</span><span class="token number">2</span> 
+<span class="token comment">#&#x662F;&#x4E0D;&#x662F;&#x6709;&#x8D44;&#x683C;&#x4E3B;&#x8282;&#x70B9;</span>
+<span class="token key atrule">node.master</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token comment">#&#x662F;&#x5426;&#x5B58;&#x50A8;&#x6570;&#x636E;</span>
+<span class="token key atrule">node.data</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token comment">#&#x6700;&#x5927;&#x96C6;&#x7FA4;&#x8282;&#x70B9;&#x6570;</span>
+<span class="token key atrule">node.max_local_storage_nodes</span><span class="token punctuation">:</span> <span class="token number">3</span> 
+<span class="token comment">#ip&#x5730;&#x5740;</span>
+<span class="token key atrule">network.host</span><span class="token punctuation">:</span> 0.0.0.0
+<span class="token comment">#&#x7AEF;&#x53E3;</span>
+<span class="token key atrule">http.port</span><span class="token punctuation">:</span> <span class="token number">9202</span>
+<span class="token comment">#&#x5185;&#x90E8;&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#x6C9F;&#x901A;&#x7AEF;&#x53E3;</span>
+<span class="token key atrule">transport.tcp.port</span><span class="token punctuation">:</span> <span class="token number">9800</span>
+<span class="token comment">#es7.x &#x4E4B;&#x540E;&#x65B0;&#x589E;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x8282;&#x70B9;&#x53D1;&#x73B0;</span>
+<span class="token key atrule">discovery.seed_hosts</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;localhost:9700&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;localhost:9800&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;localhost:9900&quot;</span><span class="token punctuation">]</span>
+<span class="token comment">#es7.x &#x4E4B;&#x540E;&#x65B0;&#x589E;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x96C6;&#x7FA4;&#x65F6;&#x9700;&#x8981;&#x6B64;&#x914D;&#x7F6E;&#x6765;&#x9009;&#x4E3E;master</span>
+<span class="token key atrule">cluster.initial_master_nodes</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;itcast-1&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;itcast-2&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;itcast-3&quot;</span><span class="token punctuation">]</span> 
+<span class="token comment">#&#x6570;&#x636E;&#x548C;&#x5B58;&#x50A8;&#x8DEF;&#x5F84;</span>
+<span class="token key atrule">path.data</span><span class="token punctuation">:</span> /opt/data
+<span class="token key atrule">path.logs</span><span class="token punctuation">:</span> /opt/logs
+</code></pre>
+<p><strong>4)&#x3001;&#x4E0B;&#x9762;&#x662F;elasticsearch-7.4.0-itcast3 &#x914D;&#x7F6E;&#x6587;&#x4EF6;</strong></p>
+<pre class="language-"><code class="lang-yml">
+
+<span class="token key atrule">cluster.name</span><span class="token punctuation">:</span> itcast<span class="token punctuation">-</span>es
+<span class="token key atrule">node.name</span><span class="token punctuation">:</span> itcast<span class="token punctuation">-</span><span class="token number">3</span> 
+<span class="token key atrule">node.master</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">node.data</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">node.max_local_storage_nodes</span><span class="token punctuation">:</span> <span class="token number">3</span> 
+<span class="token key atrule">network.host</span><span class="token punctuation">:</span> 0.0.0.0
+<span class="token key atrule">http.port</span><span class="token punctuation">:</span> <span class="token number">9203</span>
+<span class="token key atrule">transport.tcp.port</span><span class="token punctuation">:</span> <span class="token number">9900</span>
+<span class="token key atrule">discovery.seed_hosts</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;localhost:9700&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;localhost:9800&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;localhost:9900&quot;</span><span class="token punctuation">]</span>
+<span class="token key atrule">cluster.initial_master_nodes</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;itcast-1&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;itcast-2&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;itcast-3&quot;</span><span class="token punctuation">]</span> 
+<span class="token key atrule">path.data</span><span class="token punctuation">:</span> /opt/data
+<span class="token key atrule">path.logs</span><span class="token punctuation">:</span> /opt/logs
+</code></pre>
+<pre class="language-"><code class="lang-yml"><span class="token comment">#&#x96C6;&#x7FA4;&#x540D;&#x79F0;</span>
+<span class="token key atrule">cluster.name</span><span class="token punctuation">:</span> itcast<span class="token punctuation">-</span>es
+<span class="token comment">#&#x8282;&#x70B9;&#x540D;&#x79F0;</span>
+<span class="token key atrule">node.name</span><span class="token punctuation">:</span> itcast<span class="token punctuation">-</span><span class="token number">3</span> 
+<span class="token comment">#&#x662F;&#x4E0D;&#x662F;&#x6709;&#x8D44;&#x683C;&#x4E3B;&#x8282;&#x70B9;</span>
+<span class="token key atrule">node.master</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token comment">#&#x662F;&#x5426;&#x5B58;&#x50A8;&#x6570;&#x636E;</span>
+<span class="token key atrule">node.data</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token comment">#&#x6700;&#x5927;&#x96C6;&#x7FA4;&#x8282;&#x70B9;&#x6570;</span>
+<span class="token key atrule">node.max_local_storage_nodes</span><span class="token punctuation">:</span> <span class="token number">3</span> 
+<span class="token comment">#ip&#x5730;&#x5740;</span>
+<span class="token key atrule">network.host</span><span class="token punctuation">:</span> 0.0.0.0
+<span class="token comment">#&#x7AEF;&#x53E3;</span>
+<span class="token key atrule">http.port</span><span class="token punctuation">:</span> <span class="token number">9203</span>
+<span class="token comment">#&#x5185;&#x90E8;&#x8282;&#x70B9;&#x4E4B;&#x95F4;&#x6C9F;&#x901A;&#x7AEF;&#x53E3;</span>
+<span class="token key atrule">transport.tcp.port</span><span class="token punctuation">:</span> <span class="token number">9900</span>
+<span class="token comment">#es7.x &#x4E4B;&#x540E;&#x65B0;&#x589E;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x8282;&#x70B9;&#x53D1;&#x73B0;</span>
+<span class="token key atrule">discovery.seed_hosts</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;localhost:9700&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;localhost:9800&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;localhost:9900&quot;</span><span class="token punctuation">]</span>
+<span class="token comment">#es7.x &#x4E4B;&#x540E;&#x65B0;&#x589E;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x96C6;&#x7FA4;&#x65F6;&#x9700;&#x8981;&#x6B64;&#x914D;&#x7F6E;&#x6765;&#x9009;&#x4E3E;master</span>
+<span class="token key atrule">cluster.initial_master_nodes</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;itcast-1&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;itcast-2&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;itcast-3&quot;</span><span class="token punctuation">]</span> 
+<span class="token comment">#&#x6570;&#x636E;&#x548C;&#x5B58;&#x50A8;&#x8DEF;&#x5F84;</span>
+<span class="token key atrule">path.data</span><span class="token punctuation">:</span> /opt/data
+<span class="token key atrule">path.logs</span><span class="token punctuation">:</span> /opt/logs
+</code></pre>
+<h4 id="114--&#x6267;&#x884C;&#x6388;&#x6743;"><a name="114--&#x6267;&#x884C;&#x6388;&#x6743;" class="anchor-navigation-ex-anchor" href="#114--&#x6267;&#x884C;&#x6388;&#x6743;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.4  &#x6267;&#x884C;&#x6388;&#x6743;</h4>
+<pre class="language-"><code class="lang-shell">&#x5728;root&#x7528;&#x6237;&#x4E0B;&#x6267;&#x884C;
+<span class="token function">chown</span> <span class="token parameter variable">-R</span> itheima:itheima /opt/elasticsearch-7.4.0-itcast1
+<span class="token function">chown</span> <span class="token parameter variable">-R</span> itheima:itheima /opt/elasticsearch-7.4.0-itcast2
+<span class="token function">chown</span> <span class="token parameter variable">-R</span> itheima:itheima /opt/elasticsearch-7.4.0-itcast3
+&#x5982;&#x679C;&#x6709;&#x7684;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x6388;&#x6743;&#x5931;&#x8D25;&#xFF0C;&#x53EF;&#x4F7F;&#x7528;<span class="token punctuation">(</span>&#x4E5F;&#x662F;&#x5728;root&#x4E0B;&#x6267;&#x884C;<span class="token punctuation">)</span>
+<span class="token builtin class-name">cd</span> /opt/elasticsearch-7.4.0-itcast1/logs
+<span class="token function">chown</span> <span class="token parameter variable">-R</span> itheima:itheima ./* 
+<span class="token builtin class-name">cd</span> /opt/elasticsearch-7.4.0-itcast2/logs
+<span class="token function">chown</span> <span class="token parameter variable">-R</span> itheima:itheima ./* 
+<span class="token builtin class-name">cd</span> /opt/elasticsearch-7.4.0-itcast3/logs
+<span class="token function">chown</span> <span class="token parameter variable">-R</span> itheima:itheima ./*
+</code></pre>
+<h4 id="115-&#x542F;&#x52A8;&#x4E09;&#x4E2A;&#x8282;&#x70B9;"><a name="115-&#x542F;&#x52A8;&#x4E09;&#x4E2A;&#x8282;&#x70B9;" class="anchor-navigation-ex-anchor" href="#115-&#x542F;&#x52A8;&#x4E09;&#x4E2A;&#x8282;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.5 &#x542F;&#x52A8;&#x4E09;&#x4E2A;&#x8282;&#x70B9;</h4>
+<p>&#x542F;&#x52A8;&#x4E4B;&#x524D;&#xFF0C;&#x8BBE;&#x7F6E;ES&#x7684;JVM&#x5360;&#x7528;&#x5185;&#x5B58;&#x53C2;&#x6570;&#xFF0C;&#x9632;&#x6B62;&#x5185;&#x5B58;&#x4E0D;&#x8DB3;&#x9519;&#x8BEF;</p>
+<p><a href="imgs/1575630754009.png" data-lightbox="a6efc54a-c92a-4453-9223-aaf09fac373d" data-title="1575630754009"><img src="imgs/1575630754009.png" alt="1575630754009"></a></p>
+<pre class="language-"><code class="lang-shell"><span class="token function">vim</span> /opt/elasticsearch-7.4.0-itcast1/bin/elasticsearch
+</code></pre>
+<p><a href="imgs/1575631078654.png" data-lightbox="4bbd19db-b7b0-4ae7-93ff-d5793a42d45d" data-title="1575631078654"><img src="imgs/1575631078654.png" alt="1575631078654"></a></p>
+<p>&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#xFF0C;ES&#x542F;&#x52A8;&#x65F6;&#x52A0;&#x8F7D;/config/jvm.options&#x6587;&#x4EF6;</p>
+<pre class="language-"><code class="lang-shell"><span class="token function">vim</span> /opt/elasticsearch-7.4.0-itcast1/config/jvm.options
+</code></pre>
+<p><a href="imgs/1575630948133.png" data-lightbox="3ce43100-c390-4119-883d-3925a1ff3f88" data-title="1575630948133"><img src="imgs/1575630948133.png" alt="1575630948133"></a></p>
+<p> &#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;ES&#x542F;&#x52A8;JVM&#x6700;&#x5C0F;&#x5185;&#x5B58;1G&#xFF0C;&#x6700;&#x5927;&#x5185;&#x5B58;1G</p>
+<pre class="language-"><code class="lang-shell">-xms:&#x6700;&#x5C0F;&#x5185;&#x5B58;
+-xmx:&#x6700;&#x5927;&#x5185;&#x5B58;
+</code></pre>
+<p>&#x4FEE;&#x6539;&#x4E3A;256m</p>
+<p><a href="imgs/1575631033297.png" data-lightbox="f7422728-b0f6-46ab-b4dc-d10a10534a26" data-title="1575631033297"><img src="imgs/1575631033297.png" alt="1575631033297"></a></p>
+<p>&#x542F;&#x52A8;&#x6210;&#x529F;&#x8BBF;&#x95EE;&#x8282;&#x70B9;&#x4E00;&#xFF1A;</p>
+<p><a href="imgs/1575628494844.png" data-lightbox="a72ef34f-e200-4fd8-b641-f42f8c797807" data-title="1575628494844"><img src="imgs/1575628494844.png" alt="1575628494844"></a></p>
+<p>&#x53EF;&#x4EE5;&#x4ECE;&#x65E5;&#x5FD7;&#x4E2D;&#x770B;&#x5230;&#xFF1A;master not discovered yet&#x3002;&#x8FD8;&#x6CA1;&#x6709;&#x53D1;&#x73B0;&#x4E3B;&#x8282;&#x70B9;</p>
+<p>&#x8BBF;&#x95EE;&#x96C6;&#x7FA4;&#x72B6;&#x6001;&#x4FE1;&#x606F; <a href="http://192.168.149.135:9201/_cat/health?v" target="_blank">http://192.168.149.135:9201/_cat/health?v</a> &#x4E0D;&#x6210;&#x529F;</p>
+<p><a href="imgs/1575628567827.png" data-lightbox="da0b9369-8226-41f9-a56b-afb44218bde7" data-title="1575628567827"><img src="imgs/1575628567827.png" alt="1575628567827"></a></p>
+<p>&#x542F;&#x52A8;&#x6210;&#x529F;&#x8BBF;&#x95EE;&#x8282;&#x70B9;&#x4E8C;:</p>
+<p><a href="imgs/1575628735672.png" data-lightbox="df30cb61-fb12-4f4a-868c-c339dbf9fa03" data-title="1575628735672"><img src="imgs/1575628735672.png" alt="1575628735672"></a></p>
+<p>&#x53EF;&#x4EE5;&#x4ECE;&#x65E5;&#x5FD7;&#x4E2D;&#x770B;&#x5230;&#xFF1A;master not discovered yet&#x3002;&#x8FD8;&#x6CA1;&#x6709;&#x53D1;&#x73B0;&#x4E3B;&#x8282;&#x70B9;master node changed.&#x5DF2;&#x7ECF;&#x9009;&#x4E3E;&#x51FA;&#x4E3B;&#x8282;&#x70B9;itcast-2</p>
+<p>&#x8BBF;&#x95EE;&#x96C6;&#x7FA4;&#x72B6;&#x6001;&#x4FE1;&#x606F; <a href="http://192.168.149.135:9201/_cat/health?v" target="_blank">http://192.168.149.135:9201/_cat/health?v</a>  &#x6210;&#x529F;</p>
+<p><a href="imgs/1575628812009.png" data-lightbox="ba0d8cf0-548c-45d2-acff-60b900199630" data-title="1575628812009"><img src="imgs/1575628812009.png" alt="1575628812009"></a></p>
+<pre class="language-"><code class="lang-tex">&#x5065;&#x5EB7;&#x72B6;&#x51B5;&#x7ED3;&#x679C;&#x89E3;&#x91CA;&#xFF1A;
+
+cluster &#x96C6;&#x7FA4;&#x540D;&#x79F0;
+status &#x96C6;&#x7FA4;&#x72B6;&#x6001; 
+    green&#x4EE3;&#x8868;&#x5065;&#x5EB7;&#xFF1B;
+    yellow&#x4EE3;&#x8868;&#x5206;&#x914D;&#x4E86;&#x6240;&#x6709;&#x4E3B;&#x5206;&#x7247;&#xFF0C;&#x4F46;&#x81F3;&#x5C11;&#x7F3A;&#x5C11;&#x4E00;&#x4E2A;&#x526F;&#x672C;&#xFF0C;&#x6B64;&#x65F6;&#x96C6;&#x7FA4;&#x6570;&#x636E;&#x4ECD;&#x65E7;&#x5B8C;&#x6574;&#xFF1B;
+    red &#x4EE3;&#x8868;&#x90E8;&#x5206;&#x4E3B;&#x5206;&#x7247;&#x4E0D;&#x53EF;&#x7528;&#xFF0C;&#x53EF;&#x80FD;&#x5DF2;&#x7ECF;&#x4E22;&#x5931;&#x6570;&#x636E;&#x3002;
+node.total&#x4EE3;&#x8868;&#x5728;&#x7EBF;&#x7684;&#x8282;&#x70B9;&#x603B;&#x6570;&#x91CF;
+node.data&#x4EE3;&#x8868;&#x5728;&#x7EBF;&#x7684;&#x6570;&#x636E;&#x8282;&#x70B9;&#x7684;&#x6570;&#x91CF;
+shards &#x5B58;&#x6D3B;&#x7684;&#x5206;&#x7247;&#x6570;&#x91CF;
+pri &#x5B58;&#x6D3B;&#x7684;&#x4E3B;&#x5206;&#x7247;&#x6570;&#x91CF; &#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B; shards&#x7684;&#x6570;&#x91CF;&#x662F;pri&#x7684;&#x4E24;&#x500D;&#x3002;
+relo&#x8FC1;&#x79FB;&#x4E2D;&#x7684;&#x5206;&#x7247;&#x6570;&#x91CF;&#xFF0C;&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E3A; 0
+init &#x521D;&#x59CB;&#x5316;&#x4E2D;&#x7684;&#x5206;&#x7247;&#x6570;&#x91CF; &#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E3A; 0
+unassign&#x672A;&#x5206;&#x914D;&#x7684;&#x5206;&#x7247; &#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E3A; 0
+pending_tasks&#x51C6;&#x5907;&#x4E2D;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x4EFB;&#x52A1;&#x6307;&#x8FC1;&#x79FB;&#x5206;&#x7247;&#x7B49; &#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E3A; 0
+max_task_wait_time&#x4EFB;&#x52A1;&#x6700;&#x957F;&#x7B49;&#x5F85;&#x65F6;&#x95F4;
+active_shards_percent&#x6B63;&#x5E38;&#x5206;&#x7247;&#x767E;&#x5206;&#x6BD4; &#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E3A; 100%
+</code></pre>
+<p>&#x542F;&#x52A8;&#x6210;&#x529F;&#x8BBF;&#x95EE;&#x8282;&#x70B9;&#x4E09;</p>
+<p>&#x8BBF;&#x95EE;&#x96C6;&#x7FA4;&#x72B6;&#x6001;&#x4FE1;&#x606F; <a href="http://192.168.149.135:9201/_cat/health?v" target="_blank">http://192.168.149.135:9201/_cat/health?v</a>  &#x6210;&#x529F;</p>
+<p><a href="imgs/1575628972101.png" data-lightbox="6141f130-d65a-48ee-a981-fff61b325481" data-title="1575628972101"><img src="imgs/1575628972101.png" alt="1575628972101"></a></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8282;&#x70B9;&#x5DF2;&#x7ECF;&#x53D8;&#x4E3A;3&#x4E2A;&#xFF0C;&#x81F3;&#x6B64;&#xFF0C;ES&#x96C6;&#x7FA4;&#x5DF2;&#x7ECF;&#x642D;&#x5EFA;&#x6210;&#x529F;~</p>
+<h2 id="12--&#x4F7F;&#x7528;kibana&#x914D;&#x7F6E;&#x548C;&#x7BA1;&#x7406;&#x96C6;&#x7FA4;"><a name="12--&#x4F7F;&#x7528;kibana&#x914D;&#x7F6E;&#x548C;&#x7BA1;&#x7406;&#x96C6;&#x7FA4;" class="anchor-navigation-ex-anchor" href="#12--&#x4F7F;&#x7528;kibana&#x914D;&#x7F6E;&#x548C;&#x7BA1;&#x7406;&#x96C6;&#x7FA4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. 1.2  &#x4F7F;&#x7528;Kibana&#x914D;&#x7F6E;&#x548C;&#x7BA1;&#x7406;&#x96C6;&#x7FA4;</h2>
+<h4 id="121-&#x96C6;&#x7FA4;&#x914D;&#x7F6E;"><a name="121-&#x96C6;&#x7FA4;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#121-&#x96C6;&#x7FA4;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1 &#x96C6;&#x7FA4;&#x914D;&#x7F6E;</h4>
+<p>&#x56E0;&#x4E3A;&#x4E4B;&#x524D;&#x6211;&#x4EEC;&#x5728;&#x5355;&#x673A;&#x6F14;&#x793A;&#x7684;&#x65F6;&#x5019;&#x4E5F;&#x4F7F;&#x7528;&#x5230;&#x4E86;Kibana&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x590D;&#x5236;&#x51FA;&#x6765;&#x4E00;&#x4E2A;Kibana&#xFF0C;&#x7136;&#x540E;&#x4FEE;&#x6539;&#x5B83;&#x7684;&#x96C6;&#x7FA4;&#x914D;&#x7F6E;</p>
+<pre class="language-"><code class="lang-shell"><span class="token builtin class-name">cd</span> /opt/
+<span class="token function">cp</span> <span class="token parameter variable">-r</span> kibana-7.4.0-linux-x86_64   kibana-7.4.0-linux-x86_64-cluster
+<span class="token comment"># &#x7531;&#x4E8E; kibana &#x4E2D;&#x6587;&#x4EF6;&#x4F17;&#x591A;&#xFF0C;&#x6B64;&#x5904;&#x4F1A;&#x7B49;&#x5F85;&#x5927;&#x7EA6;1&#x5206;&#x949F;&#x7684;&#x65F6;&#x95F4;</span>
+</code></pre>
+<p>&#x4FEE;&#x6539;Kibana&#x7684;&#x96C6;&#x7FA4;&#x914D;&#x7F6E;</p>
+<pre class="language-"><code class="lang-shell"><span class="token function">vim</span>  kibana-7.4.0-linux-x86_64-cluster/config/kibana.yml
+&#x52A0;&#x5165;&#x4E0B;&#x9762;&#x7684;&#x914D;&#x7F6E;
+elasticsearch.hosts: <span class="token punctuation">[</span><span class="token string">&quot;http://localhost:9201&quot;</span>,<span class="token string">&quot;http://localhost:9202&quot;</span>,<span class="token string">&quot;http://localhost:9203&quot;</span><span class="token punctuation">]</span>
+</code></pre>
+<p>&#x542F;&#x52A8;Kibana</p>
+<pre class="language-"><code class="lang-shell"><span class="token function">sh</span> kibana --allow-root
+</code></pre>
+<p><a href="imgs/1575629869248.png" data-lightbox="9df258b0-9385-4451-a884-299f9c045690" data-title="1575629869248"><img src="imgs/1575629869248.png" alt="1575629869248"></a></p>
+<h4 id="122-&#x7BA1;&#x7406;&#x96C6;&#x7FA4;"><a name="122-&#x7BA1;&#x7406;&#x96C6;&#x7FA4;" class="anchor-navigation-ex-anchor" href="#122-&#x7BA1;&#x7406;&#x96C6;&#x7FA4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.2 &#x7BA1;&#x7406;&#x96C6;&#x7FA4;</h4>
+<p>1&#x3001;&#x6253;&#x5F00;Kibana&#xFF0C;&#x70B9;&#x5F00; Stack Monitoring &#x96C6;&#x7FA4;&#x76D1;&#x63A7;</p>
+<p><a href="imgs/1575630589113.png" data-lightbox="e11b9b60-aad6-4ba8-a715-9c5a2b098058" data-title="1575630589113"><img src="imgs/1575630589113.png" alt="1575630589113"></a></p>
+<p><a href="imgs/1575631125143.png" data-lightbox="60718cc3-f6c6-4f97-8dbf-5905a8f4a501" data-title="1575631125143"><img src="imgs/1575631125143.png" alt="1575631125143"></a></p>
+<p>2&#x3001;&#x70B9;&#x51FB;&#x3010;Nodes&#x3011;&#x67E5;&#x770B;&#x8282;&#x70B9;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</p>
+<p><a href="imgs/1575631203718.png" data-lightbox="604955ba-163b-4e78-811f-2f7e3679d2e7" data-title="1575631203718"><img src="imgs/1575631203718.png" alt="1575631203718"></a></p>
+<p><a href="imgs/1575631303974.png" data-lightbox="4cb550aa-b369-4049-8b9b-06cd3d0dab08" data-title="1575631303974"><img src="imgs/1575631303974.png" alt="1575631303974"></a></p>
+<p>&#x5728;&#x4E0A;&#x56FE;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x7EA2;&#x6846;&#x5904;&#x663E;&#x793A;&#x3010;Green&#x3011;&#xFF0C;&#x7EFF;&#x8272;&#xFF0C;&#x8868;&#x793A;&#x96C6;&#x7FA4;&#x5904;&#x7406;&#x5065;&#x5EB7;&#x72B6;&#x6001;</p>
+<p>&#x7B2C;&#x4E8C;&#x4E2A;&#x7EA2;&#x6846;&#x662F;&#x6211;&#x4EEC;&#x96C6;&#x7FA4;&#x7684;&#x4E09;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x6CE8;&#x610F;&#xFF0C;itcast-3&#x65C1;&#x8FB9;&#x662F;&#x661F;&#x661F;&#xFF0C;&#x8868;&#x793A;&#x662F;&#x4E3B;&#x8282;&#x70B9;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; MISIN 2022 | <a href="https://beian.miit.gov.cn/" text-decoration:none="" target="_blank">&#x8C6B;ICP&#x5907;2021006345&#x53F7;-1</a> all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2020-06-11 10:01:32
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="数据准备.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 数据准备">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ElasticSearch集群搭建","level":"1.5.5.2.1","depth":4,"next":{"title":"数据准备","level":"1.5.5.2.2","depth":4,"path":"4.流行框架/6.ElasticSearch/day02资料/数据准备.md","ref":"4.流行框架/6.ElasticSearch/day02资料/数据准备.md","articles":[]},"previous":{"title":"day02资料","level":"1.5.5.2","depth":3,"ref":"","articles":[{"title":"ElasticSearch集群搭建","level":"1.5.5.2.1","depth":4,"path":"4.流行框架/6.ElasticSearch/day02资料/ElasticSearch集群搭建.md","ref":"4.流行框架/6.ElasticSearch/day02资料/ElasticSearch集群搭建.md","articles":[]},{"title":"数据准备","level":"1.5.5.2.2","depth":4,"path":"4.流行框架/6.ElasticSearch/day02资料/数据准备.md","ref":"4.流行框架/6.ElasticSearch/day02资料/数据准备.md","articles":[]},{"title":"脚本","level":"1.5.5.2.3","depth":4,"path":"4.流行框架/6.ElasticSearch/day02资料/脚本.md","ref":"4.流行框架/6.ElasticSearch/day02资料/脚本.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","expandable-chapters-small","sidebar-style","splitter","anchor-navigation-ex","back-to-top-button","code","prism","github@2.0.0","github-edit","-sharing","sharing-plus","donate","-lunr","-search","search-pro","tbfed-pagefooter","change_girls","lightbox","favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"title":"《BIG DATA》","author":"MISIN GUO"},"tbfed-pagefooter":{"copyright":"Copyright &copy MISIN 2022 | <a href=\"https://beian.miit.gov.cn/\" text-decoration:none target=\"_blank\">豫ICP备2021006345号-1</a>","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"lang":{"flow":"java"},"css":["prismjs/themes/prism-solarizedlight.css"]},"github":{"url":"https://github.com/MisinGuo/bigdata"},"splitter":{},"change_girls":{"time":10,"urls":["https://misinguo.github.io/eternity/screen/1.jpg","https://misinguo.github.io/eternity/screen/2.jpg","https://misinguo.github.io/eternity/screen/3.jpg"]},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"title":"小乞丐特可怜🥺","button":"打赏","wechat":"https://misinguo.github.io/eternity/wechat.jpg","alipay":"https://misinguo.github.io/eternity/payment.jpg","wechatText":"微信","alipayText":"支付宝"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-edit":{"repo":"MisinGuo/bigdata","branch":"master"},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":false,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":{"shortcut":"fav/favicon.ico","bookmark":"fav/favicon.ico","appleTouch":"fav/apple-touch-icon.png","appleTouchMore":{"120x120":"fav/apple-touch-icon-120x120.png","180x180":"fav/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"expandable-chapters-small":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":false,"facebook":false,"weibo":false,"twitter":false,"pocket":false,"google":false,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"黑马程序员吧","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"图书编号有啥用","variables":{"themeLou":{}},"title":"《BIG DATA》","gitbook":"*","description":"啥"},"file":{"path":"4.流行框架/6.ElasticSearch/day02资料/ElasticSearch集群搭建.md","mtime":"2020-06-11T02:01:32.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-16T04:15:51.490Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sidebar-style/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-github-edit/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-change_girls/girls.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

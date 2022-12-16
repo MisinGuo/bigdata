@@ -1,0 +1,36 @@
+{
+  "name": "1.0",
+  "version": "1.0.0",
+  "description": "大数据笔记",
+  "main": "index.js",
+  "scripts": {
+    "serve": "gitbook serve",
+    "build": "gitbook build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gitbook-plugin-anchor-navigation-ex": "^1.0.14",
+    "gitbook-plugin-back-to-top-button": "^0.1.4",
+    "gitbook-plugin-change_girls": "^2.2.1",
+    "gitbook-plugin-code": "^0.1.0",
+    "gitbook-plugin-custom-favicon": "0.0.4",
+    "gitbook-plugin-donate": "^1.0.2",
+    "gitbook-plugin-expandable-chapters": "^0.2.0",
+    "gitbook-plugin-expandable-chapters-small": "^0.1.7",
+    "gitbook-plugin-favicon": "0.0.2",
+    "gitbook-plugin-github": "^2.0.0",
+    "gitbook-plugin-github-edit": "^1.1.1",
+    "gitbook-plugin-lightbox": "^1.2.0",
+    "gitbook-plugin-page-treeview-simple": "^4.0.2",
+    "gitbook-plugin-prism": "^2.4.0",
+    "gitbook-plugin-search-plus": "^1.0.4-alpha-3",
+    "gitbook-plugin-search-pro": "^2.0.2",
+    "gitbook-plugin-sharing-plus": "0.0.2",
+    "gitbook-plugin-sidebar-style": "^1.0.2",
+    "gitbook-plugin-splitter": "0.0.8",
+    "gitbook-plugin-tbfed-pagefooter": "0.0.1",
+    "gitbook-plugin-theme-lou": "^1.0.3",
+    "realm": "^2.1.0"
+  }
+}

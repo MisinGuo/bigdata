@@ -1,0 +1,2511 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Mybatis Day 01 · 《BIG DATA》</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="黑马程序员吧">
+        <meta name="identifier" content="图书编号有啥用" scheme="ISBN">
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sidebar-style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-change_girls/girls.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mybatis-day02.html" />
+    
+    
+
+    
+        <link rel="shortcut icon" href='../../fav/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../fav/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../fav/apple-touch-icon.png'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../fav/apple-touch-icon-120x120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../fav/apple-touch-icon-180x180.png">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    1.JAVA基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../1.JAVA基础/day01-java基础语法.html">
+            
+                <a href="../../1.JAVA基础/day01-java基础语法.html">
+            
+                    
+                    day01-java基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../1.JAVA基础/day02-Java基础语法.html">
+            
+                <a href="../../1.JAVA基础/day02-Java基础语法.html">
+            
+                    
+                    day02-Java基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../1.JAVA基础/day03 switch&循环语句.html">
+            
+                <a href="../../1.JAVA基础/day03 switch&循环语句.html">
+            
+                    
+                    day03 switch&循环语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../1.JAVA基础/day04 IDEA&数组.html">
+            
+                <a href="../../1.JAVA基础/day04 IDEA&数组.html">
+            
+                    
+                    day04 IDEA&数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../1.JAVA基础/day05 方法.html">
+            
+                <a href="../../1.JAVA基础/day05 方法.html">
+            
+                    
+                    day05 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../1.JAVA基础/day06 Debug&基础练习.html">
+            
+                <a href="../../1.JAVA基础/day06 Debug&基础练习.html">
+            
+                    
+                    day06 Debug&基础练习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../1.JAVA基础/day07 面向对象.html">
+            
+                <a href="../../1.JAVA基础/day07 面向对象.html">
+            
+                    
+                    day07 面向对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../1.JAVA基础/day08 常用API.html">
+            
+                <a href="../../1.JAVA基础/day08 常用API.html">
+            
+                    
+                    day08 常用API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../../1.JAVA基础/day09 ArrayList集合&学生管理系统.html">
+            
+                <a href="../../1.JAVA基础/day09 ArrayList集合&学生管理系统.html">
+            
+                    
+                    day09 ArrayList集合&学生管理系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../../1.JAVA基础/day10Git.html">
+            
+                <a href="../../1.JAVA基础/day10Git.html">
+            
+                    
+                    Day 10 Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../../1.JAVA基础/day11-分类和static.html">
+            
+                <a href="../../1.JAVA基础/day11-分类和static.html">
+            
+                    
+                    day11-分类和static
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../../1.JAVA基础/day12-继承.html">
+            
+                <a href="../../1.JAVA基础/day12-继承.html">
+            
+                    
+                    day12-继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../../1.JAVA基础/day13-接口和内部类.html">
+            
+                <a href="../../1.JAVA基础/day13-接口和内部类.html">
+            
+                    
+                    day13-接口和内部类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../../1.JAVA基础/day14-常用API01.html">
+            
+                <a href="../../1.JAVA基础/day14-常用API01.html">
+            
+                    
+                    day14-常用API01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../../1.JAVA基础/day15-常用API02.html">
+            
+                <a href="../../1.JAVA基础/day15-常用API02.html">
+            
+                    
+                    day15-常用API02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../../1.JAVA基础/day16集合01.html">
+            
+                <a href="../../1.JAVA基础/day16集合01.html">
+            
+                    
+                    day16集合01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../../1.JAVA基础/day17集合02.html">
+            
+                <a href="../../1.JAVA基础/day17集合02.html">
+            
+                    
+                    day17集合02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.18" data-path="../../1.JAVA基础/day18集合03.html">
+            
+                <a href="../../1.JAVA基础/day18集合03.html">
+            
+                    
+                    day18集合03
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.19" data-path="../../1.JAVA基础/day19IO流01.html">
+            
+                <a href="../../1.JAVA基础/day19IO流01.html">
+            
+                    
+                    day19IO流01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.20" data-path="../../1.JAVA基础/day20IO流02.html">
+            
+                <a href="../../1.JAVA基础/day20IO流02.html">
+            
+                    
+                    day20IO流02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.21" data-path="../../1.JAVA基础/day21-多线程01.html">
+            
+                <a href="../../1.JAVA基础/day21-多线程01.html">
+            
+                    
+                    day21-多线程01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.22" data-path="../../1.JAVA基础/day22 多线程02.html">
+            
+                <a href="../../1.JAVA基础/day22 多线程02.html">
+            
+                    
+                    day22 多线程02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.23" data-path="../../1.JAVA基础/day23-网络编程01.html">
+            
+                <a href="../../1.JAVA基础/day23-网络编程01.html">
+            
+                    
+                    day23-网络编程01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.24" data-path="../../1.JAVA基础/day24-网络编程02.html">
+            
+                <a href="../../1.JAVA基础/day24-网络编程02.html">
+            
+                    
+                    day24-网络编程02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.25" data-path="../../1.JAVA基础/day25-基础加强01.html">
+            
+                <a href="../../1.JAVA基础/day25-基础加强01.html">
+            
+                    
+                    day25-基础加强01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.26" data-path="../../1.JAVA基础/day26-基础加强02.html">
+            
+                <a href="../../1.JAVA基础/day26-基础加强02.html">
+            
+                    
+                    day26-基础加强02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.27" data-path="../../1.JAVA基础/day27-基础加强03.html">
+            
+                <a href="../../1.JAVA基础/day27-基础加强03.html">
+            
+                    
+                    day27-基础加强03
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    2.JavaWeb
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    1.Linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../1.Linux/Linux-01.html">
+            
+                <a href="../1.Linux/Linux-01.html">
+            
+                    
+                    Linux 01 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../1.Linux/Linux-01-1.html">
+            
+                <a href="../1.Linux/Linux-01-1.html">
+            
+                    
+                    Linux 01
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    10.Vue+Element
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../10.Vue+Element/Vue和Element.html">
+            
+                <a href="../10.Vue+Element/Vue和Element.html">
+            
+                    
+                    Vue和Element
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../10.Vue+Element/Vue和综合案例.html">
+            
+                <a href="../10.Vue+Element/Vue和综合案例.html">
+            
+                    
+                    Vue和综合案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    11.Redis
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../11.Redis/Redis.html">
+            
+                <a href="../11.Redis/Redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" >
+            
+                <span>
+            
+                    
+                    12.Maven
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../12.Maven/Maven基础.html">
+            
+                <a href="../12.Maven/Maven基础.html">
+            
+                    
+                    Maven基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" >
+            
+                <span>
+            
+                    
+                    2.HTML+CSS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../2.HTML+CSS/JavaEE-Css+Nginx.html">
+            
+                <a href="../2.HTML+CSS/JavaEE-Css+Nginx.html">
+            
+                    
+                    Java EE Css Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../2.HTML+CSS/JavaEE-HTML.html">
+            
+                <a href="../2.HTML+CSS/JavaEE-HTML.html">
+            
+                    
+                    Java EE HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" >
+            
+                <span>
+            
+                    
+                    3.JavaWeb核心
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../3.JavaWeb核心/1.Tomcat&Http协议-授课.html">
+            
+                <a href="../3.JavaWeb核心/1.Tomcat&Http协议-授课.html">
+            
+                    
+                    1.Tomcat&Http协议-授课
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="../3.JavaWeb核心/2.Servlet-授课.html">
+            
+                <a href="../3.JavaWeb核心/2.Servlet-授课.html">
+            
+                    
+                    2.Servlet-授课
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.3" data-path="../3.JavaWeb核心/3.Request&Response-授课.html">
+            
+                <a href="../3.JavaWeb核心/3.Request&Response-授课.html">
+            
+                    
+                    3.Request&Response-授课
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.4" data-path="../3.JavaWeb核心/4.Cookie&SessionJsp-授课.html">
+            
+                <a href="../3.JavaWeb核心/4.Cookie&SessionJsp-授课.html">
+            
+                    
+                    4.Cookie&SessionJsp-授课
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.5" data-path="../3.JavaWeb核心/5.EL&Filter&Listener-授课.html">
+            
+                <a href="../3.JavaWeb核心/5.EL&Filter&Listener-授课.html">
+            
+                    
+                    5.EL&Filter&Listener-授课
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" >
+            
+                <span>
+            
+                    
+                    4.mysql
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="../4.mysql/MySQL基础-01-授课笔记.html">
+            
+                <a href="../4.mysql/MySQL基础-01-授课笔记.html">
+            
+                    
+                    MySQL基础-01-授课笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="../4.mysql/MySQL进阶-02-授课笔记.html">
+            
+                <a href="../4.mysql/MySQL进阶-02-授课笔记.html">
+            
+                    
+                    MySQL进阶-02-授课笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.3" data-path="../4.mysql/MySQL高级-03-授课笔记.html">
+            
+                <a href="../4.mysql/MySQL高级-03-授课笔记.html">
+            
+                    
+                    MySQL高级-03-授课笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.4" data-path="../4.mysql/MySQL高级-04-授课笔记.html">
+            
+                <a href="../4.mysql/MySQL高级-04-授课笔记.html">
+            
+                    
+                    MySQL高级-04-授课笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" >
+            
+                <span>
+            
+                    
+                    5.JDBC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.8.1" data-path="../5.JDBC/JDBC-01-授课笔记.html">
+            
+                <a href="../5.JDBC/JDBC-01-授课笔记.html">
+            
+                    
+                    JDBC-01-授课笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.2" data-path="../5.JDBC/JDBC-02-授课笔记.html">
+            
+                <a href="../5.JDBC/JDBC-02-授课笔记.html">
+            
+                    
+                    JDBC-02-授课笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" >
+            
+                <span>
+            
+                    
+                    6.Mybatis
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.9.1" data-path="mybatis-day01.html">
+            
+                <a href="mybatis-day01.html">
+            
+                    
+                    Mybatis Day 01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.2" data-path="mybatis-day02.html">
+            
+                <a href="mybatis-day02.html">
+            
+                    
+                    Mybatis Day 02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.3" data-path="mybatis-day03.html">
+            
+                <a href="mybatis-day03.html">
+            
+                    
+                    Mybatis Day 03
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" >
+            
+                <span>
+            
+                    
+                    7.JavaScript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.10.1" data-path="../7.JavaScript/JavaScript基础.html">
+            
+                <a href="../7.JavaScript/JavaScript基础.html">
+            
+                    
+                    JavaScript基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.2" data-path="../7.JavaScript/JavaScript高级.html">
+            
+                <a href="../7.JavaScript/JavaScript高级.html">
+            
+                    
+                    JavaScript高级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.3" data-path="../7.JavaScript/尚硅谷_陈鑫_第二章_JavaScript&正则表达式.html">
+            
+                <a href="../7.JavaScript/尚硅谷_陈鑫_第二章_JavaScript&正则表达式.html">
+            
+                    
+                    尚硅谷陈鑫第二章_JavaScript&正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" >
+            
+                <span>
+            
+                    
+                    8.Jquery
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.11.1" data-path="../8.Jquery/JQuery.html">
+            
+                <a href="../8.Jquery/JQuery.html">
+            
+                    
+                    J Query
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" >
+            
+                <span>
+            
+                    
+                    9.AJAX
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.12.1" data-path="../9.AJAX/AJAX.html">
+            
+                <a href="../9.AJAX/AJAX.html">
+            
+                    
+                    AJAX
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" >
+            
+                <span>
+            
+                    
+                    Web综合案例
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.13.1" data-path="../Web综合案例/web综合案例-day01.html">
+            
+                <a href="../Web综合案例/web综合案例-day01.html">
+            
+                    
+                    web综合案例-day01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13.2" data-path="../Web综合案例/web综合案例-day02.html">
+            
+                <a href="../Web综合案例/web综合案例-day02.html">
+            
+                    
+                    web综合案例-day02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13.3" data-path="../Web综合案例/web综合案例-day03.html">
+            
+                <a href="../Web综合案例/web综合案例-day03.html">
+            
+                    
+                    web综合案例-day03
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13.4" data-path="../Web综合案例/web综合案例-day04.html">
+            
+                <a href="../Web综合案例/web综合案例-day04.html">
+            
+                    
+                    web综合案例-day04
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13.5" data-path="../Web综合案例/web综合案例-day05.html">
+            
+                <a href="../Web综合案例/web综合案例-day05.html">
+            
+                    
+                    web综合案例-day05
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    3.主流框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    1.spring
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../3.主流框架/1.spring/Spring-day01.html">
+            
+                <a href="../../3.主流框架/1.spring/Spring-day01.html">
+            
+                    
+                    Spring Day 01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../3.主流框架/1.spring/Spring-day02.html">
+            
+                <a href="../../3.主流框架/1.spring/Spring-day02.html">
+            
+                    
+                    Spring Day 02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../../3.主流框架/1.spring/Spring-day03.html">
+            
+                <a href="../../3.主流框架/1.spring/Spring-day03.html">
+            
+                    
+                    Spring Day 03
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../../3.主流框架/1.spring/spring-day04.html">
+            
+                <a href="../../3.主流框架/1.spring/spring-day04.html">
+            
+                    
+                    Spring Day 04
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    2.springMVC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../3.主流框架/2.springMVC/day01.html">
+            
+                <a href="../../3.主流框架/2.springMVC/day01.html">
+            
+                    
+                    Day 01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../../3.主流框架/2.springMVC/day02.html">
+            
+                <a href="../../3.主流框架/2.springMVC/day02.html">
+            
+                    
+                    Day 02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../../3.主流框架/2.springMVC/day03.html">
+            
+                <a href="../../3.主流框架/2.springMVC/day03.html">
+            
+                    
+                    Day 03
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    3.Maven高级
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../3.主流框架/3.Maven高级/Maven高级.html">
+            
+                <a href="../../3.主流框架/3.Maven高级/Maven高级.html">
+            
+                    
+                    Maven高级
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    4.Dubbo
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../3.主流框架/4.Dubbo/Dubbo.html">
+            
+                <a href="../../3.主流框架/4.Dubbo/Dubbo.html">
+            
+                    
+                    Dubbo
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" >
+            
+                <span>
+            
+                    
+                    5.Zookeeper
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../../3.主流框架/5.Zookeeper/zookeeper讲义md.html">
+            
+                <a href="../../3.主流框架/5.Zookeeper/zookeeper讲义md.html">
+            
+                    
+                    zookeeper讲义md
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    4.流行框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    1.Redis高级
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../../4.流行框架/1.Redis高级/第二章 Redis高级.html">
+            
+                <a href="../../4.流行框架/1.Redis高级/第二章 Redis高级.html">
+            
+                    
+                    第二章 Redis高级
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    2.spring boot
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../4.流行框架/2.spring boot/01-Springboot-day01.html">
+            
+                <a href="../../4.流行框架/2.spring boot/01-Springboot-day01.html">
+            
+                    
+                    01 Springboot Day 01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../4.流行框架/2.spring boot/02-SpringBoot高级.html">
+            
+                <a href="../../4.流行框架/2.spring boot/02-SpringBoot高级.html">
+            
+                    
+                    02-SpringBoot高级
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    4.RabbitMQ
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../../4.流行框架/4.RabbitMQ/RabbitMQ 讲义.html">
+            
+                <a href="../../4.流行框架/4.RabbitMQ/RabbitMQ 讲义.html">
+            
+                    
+                    RabbitMQ 讲义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../../4.流行框架/4.RabbitMQ/RabbitMQ安装说明文档.html">
+            
+                <a href="../../4.流行框架/4.RabbitMQ/RabbitMQ安装说明文档.html">
+            
+                    
+                    RabbitMQ安装说明文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../../4.流行框架/4.RabbitMQ/RabbitMQ集群搭建.html">
+            
+                <a href="../../4.流行框架/4.RabbitMQ/RabbitMQ集群搭建.html">
+            
+                    
+                    RabbitMQ集群搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" >
+            
+                <span>
+            
+                    
+                    5.docker
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.4.1" data-path="../../4.流行框架/5.docker/docker 私有仓库.html">
+            
+                <a href="../../4.流行框架/5.docker/docker 私有仓库.html">
+            
+                    
+                    docker 私有仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.2" data-path="../../4.流行框架/5.docker/docker-compose.html">
+            
+                <a href="../../4.流行框架/5.docker/docker-compose.html">
+            
+                    
+                    Docker Compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.3" data-path="../../4.流行框架/5.docker/dockerfile.html">
+            
+                <a href="../../4.流行框架/5.docker/dockerfile.html">
+            
+                    
+                    Dockerfile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.4" data-path="../../4.流行框架/5.docker/docker应用部署.html">
+            
+                <a href="../../4.流行框架/5.docker/docker应用部署.html">
+            
+                    
+                    docker应用部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.5" data-path="../../4.流行框架/5.docker/安装docker.html">
+            
+                <a href="../../4.流行框架/5.docker/安装docker.html">
+            
+                    
+                    安装docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" >
+            
+                <span>
+            
+                    
+                    6.ElasticSearch
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1" >
+            
+                <span>
+            
+                    
+                    day01资料
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1.1" data-path="../../4.流行框架/6.ElasticSearch/day01资料/Elasticsearch 安装.html">
+            
+                <a href="../../4.流行框架/6.ElasticSearch/day01资料/Elasticsearch 安装.html">
+            
+                    
+                    Elasticsearch 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.1.2" data-path="../../4.流行框架/6.ElasticSearch/day01资料/ik分词器安装.html">
+            
+                <a href="../../4.流行框架/6.ElasticSearch/day01资料/ik分词器安装.html">
+            
+                    
+                    ik分词器安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.2" >
+            
+                <span>
+            
+                    
+                    day02资料
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.2.1" data-path="../../4.流行框架/6.ElasticSearch/day02资料/ElasticSearch集群搭建.html">
+            
+                <a href="../../4.流行框架/6.ElasticSearch/day02资料/ElasticSearch集群搭建.html">
+            
+                    
+                    ElasticSearch集群搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.2.2" data-path="../../4.流行框架/6.ElasticSearch/day02资料/数据准备.html">
+            
+                <a href="../../4.流行框架/6.ElasticSearch/day02资料/数据准备.html">
+            
+                    
+                    数据准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.2.3" data-path="../../4.流行框架/6.ElasticSearch/day02资料/脚本.html">
+            
+                <a href="../../4.流行框架/6.ElasticSearch/day02资料/脚本.html">
+            
+                    
+                    脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.3" data-path="../../4.流行框架/6.ElasticSearch/1.Elasticsearch.html">
+            
+                <a href="../../4.流行框架/6.ElasticSearch/1.Elasticsearch.html">
+            
+                    
+                    1.Elasticsearch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.4" data-path="../../4.流行框架/6.ElasticSearch/ElasticSearch-2.html">
+            
+                <a href="../../4.流行框架/6.ElasticSearch/ElasticSearch-2.html">
+            
+                    
+                    Elastic Search 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    5.大数据基础增强
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    1.Linux实战
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../5.大数据基础增强/1.Linux实战/day01/day01.html">
+            
+                <a href="../../5.大数据基础增强/1.Linux实战/day01/day01.html">
+            
+                    
+                    Day 01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../../5.大数据基础增强/1.Linux实战/day02_打包压缩_vim编辑器_系统管理_用户权限/day02.html">
+            
+                <a href="../../5.大数据基础增强/1.Linux实战/day02_打包压缩_vim编辑器_系统管理_用户权限/day02.html">
+            
+                    
+                    Day 02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../../5.大数据基础增强/1.Linux实战/day03/day03.html">
+            
+                <a href="../../5.大数据基础增强/1.Linux实战/day03/day03.html">
+            
+                    
+                    Day 03
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    Tips
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../Windows文件批量重命名.html">
+            
+                <a href="../../Windows文件批量重命名.html">
+            
+                    
+                    Windows文件批量重命名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../nopay_over_wall.html">
+            
+                <a href="../../nopay_over_wall.html">
+            
+                    
+                    YOU CAN TRY IT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Mybatis Day 01</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#&#x4E00;mybatis&#x5FEB;&#x901F;&#x5165;&#x95E8;"><b>1.1.1. </b>&#x4E00;.Mybatis&#x5FEB;&#x901F;&#x5165;&#x95E8;</a></li><li><span class="title-icon "></span><a href="#&#x4E8C;-mybatis&#x7684;&#x76F8;&#x5173;api"><b>1.1.2. </b>&#x4E8C;. MyBatis&#x7684;&#x76F8;&#x5173;api</a></li><li><span class="title-icon "></span><a href="#&#x4E09;mybatis-&#x6620;&#x5C04;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><b>1.1.3. </b>&#x4E09;.MyBatis &#x6620;&#x5C04;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x56DB;mybatis&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4ECB;&#x7ECD;"><b>1.1.4. </b>&#x56DB;.Mybatis&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4ECB;&#x7ECD;</a></li><li><span class="title-icon "></span><a href="#&#x4E94;mybatis&#x4F20;&#x7EDF;&#x65B9;&#x5F0F;&#x5F00;&#x53D1;"><b>1.1.5. </b>&#x4E94;.Mybatis&#x4F20;&#x7EDF;&#x65B9;&#x5F0F;&#x5F00;&#x53D1;</a></li></ul></ul></ul></div><h3 id="&#x4E00;mybatis&#x5FEB;&#x901F;&#x5165;&#x95E8;"><a name="&#x4E00;mybatis&#x5FEB;&#x901F;&#x5165;&#x95E8;" class="anchor-navigation-ex-anchor" href="#&#x4E00;mybatis&#x5FEB;&#x901F;&#x5165;&#x95E8;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. &#x4E00;.Mybatis&#x5FEB;&#x901F;&#x5165;&#x95E8;</h3>
+<h4 id="11-&#x6846;&#x67B6;&#x4ECB;&#x7ECD;"><a name="11-&#x6846;&#x67B6;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#11-&#x6846;&#x67B6;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 &#x6846;&#x67B6;&#x4ECB;&#x7ECD;</h4>
+<ul>
+<li><p>&#x6846;&#x67B6;&#x662F;&#x4E00;&#x6B3E;&#x534A;&#x6210;&#x54C1;&#x8F6F;&#x4EF6;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x57FA;&#x4E8E;&#x8FD9;&#x4E2A;&#x534A;&#x6210;&#x54C1;&#x8F6F;&#x4EF6;&#x7EE7;&#x7EED;&#x5F00;&#x53D1;&#xFF0C;&#x6765;&#x5B8C;&#x6210;&#x6211;&#x4EEC;&#x4E2A;&#x6027;&#x5316;&#x7684;&#x9700;&#x6C42;&#xFF01;</p>
+</li>
+<li><p>&#x5982;&#x56FE;:</p>
+<p><a href="1img/1590919723185.png" data-lightbox="2eafd452-0706-4734-a15a-29ed7e0f1993" data-title="1590919723185"><img src="1img/1590919723185.png" alt="1590919723185"></a></p>
+</li>
+</ul>
+<h4 id="12-orm&#x4ECB;&#x7ECD;"><a name="12-orm&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#12-orm&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2 ORM&#x4ECB;&#x7ECD;</h4>
+<ul>
+<li><p>ORM(Object Relational Mapping)&#xFF1A; &#x5BF9;&#x8C61;&#x5173;&#x7CFB;&#x6620;&#x5C04;</p>
+</li>
+<li><p>&#x6307;&#x7684;&#x662F;&#x6301;&#x4E45;&#x5316;&#x6570;&#x636E;&#x548C;&#x5B9E;&#x4F53;&#x5BF9;&#x8C61;&#x7684;&#x6620;&#x5C04;&#x6A21;&#x5F0F;&#xFF0C;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x4E0E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x5B58;&#x5728;&#x7684;&#x4E92;&#x4E0D;&#x5339;&#x914D;&#x7684;&#x73B0;&#x8C61;&#x7684;&#x6280;&#x672F;&#x3002;</p>
+</li>
+<li><p>&#x5982;&#x56FE;:</p>
+<p><a href="1img/1590919786415.png" data-lightbox="bdbf2daa-ffad-433a-8191-f19772e46df8" data-title="1590919786415"><img src="1img/1590919786415.png" alt="1590919786415"></a></p>
+</li>
+<li><p>&#x5177;&#x4F53;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#x5982;&#x4E0B;&#x56FE;:</p>
+</li>
+</ul>
+<p><a href="1img/1590919824416.png" data-lightbox="504f82d3-956d-4611-b2dd-cf9343db55a4" data-title="1590919824416"><img src="1img/1590919824416.png" alt="1590919824416"></a></p>
+<h4 id="13-&#x539F;&#x59CB;jdbc&#x64CD;&#x4F5C;&#xFF08;&#x67E5;&#x8BE2;&#x6570;&#x636E;&#xFF09;"><a name="13-&#x539F;&#x59CB;jdbc&#x64CD;&#x4F5C;&#xFF08;&#x67E5;&#x8BE2;&#x6570;&#x636E;&#xFF09;" class="anchor-navigation-ex-anchor" href="#13-&#x539F;&#x59CB;jdbc&#x64CD;&#x4F5C;&#xFF08;&#x67E5;&#x8BE2;&#x6570;&#x636E;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3 &#x539F;&#x59CB;jdbc&#x64CD;&#x4F5C;&#xFF08;&#x67E5;&#x8BE2;&#x6570;&#x636E;&#xFF09;</h4>
+<p><a href="1img/1590915350408.png" data-lightbox="3c6c2f76-9864-4efc-bac1-596a8a5ddab2" data-title="1590915350408"><img src="1img/1590915350408.png" alt="1590915350408"></a></p>
+<h4 id="14&#x539F;&#x59CB;jdbc&#x64CD;&#x4F5C;&#xFF08;&#x63D2;&#x5165;&#x6570;&#x636E;&#xFF09;"><a name="14&#x539F;&#x59CB;jdbc&#x64CD;&#x4F5C;&#xFF08;&#x63D2;&#x5165;&#x6570;&#x636E;&#xFF09;" class="anchor-navigation-ex-anchor" href="#14&#x539F;&#x59CB;jdbc&#x64CD;&#x4F5C;&#xFF08;&#x63D2;&#x5165;&#x6570;&#x636E;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4&#x539F;&#x59CB;jdbc&#x64CD;&#x4F5C;&#xFF08;&#x63D2;&#x5165;&#x6570;&#x636E;&#xFF09;</h4>
+<p><a href="1img/1590915389449.png" data-lightbox="62c4d003-bce6-4840-b2d7-129c47a434dc" data-title="1590915389449"><img src="1img/1590915389449.png" alt="1590915389449"></a></p>
+<h4 id="15-&#x539F;&#x59CB;jdbc&#x64CD;&#x4F5C;&#x7684;&#x5206;&#x6790;"><a name="15-&#x539F;&#x59CB;jdbc&#x64CD;&#x4F5C;&#x7684;&#x5206;&#x6790;" class="anchor-navigation-ex-anchor" href="#15-&#x539F;&#x59CB;jdbc&#x64CD;&#x4F5C;&#x7684;&#x5206;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5 &#x539F;&#x59CB;jdbc&#x64CD;&#x4F5C;&#x7684;&#x5206;&#x6790;</h4>
+<ul>
+<li><p>&#x539F;&#x59CB; JDBC &#x7684;&#x64CD;&#x4F5C;&#x95EE;&#x9898;&#x5206;&#x6790; </p>
+<p>&#x200B;    1.&#x9891;&#x7E41;&#x521B;&#x5EFA;&#x548C;&#x9500;&#x6BC1;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8FDE;&#x63A5;&#x4F1A;&#x9020;&#x6210;&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#x6D6A;&#x8D39;&#x4ECE;&#x800C;&#x5F71;&#x54CD;&#x7CFB;&#x7EDF;&#x6027;&#x80FD;&#x3002;</p>
+<ol>
+<li>sql &#x8BED;&#x53E5;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x786C;&#x7F16;&#x7801;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x4FEE;&#x6539; sql &#x8BED;&#x53E5;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x4FEE;&#x6539; java &#x4EE3;&#x7801;&#xFF0C;&#x9020;&#x6210;&#x4EE3;&#x7801;&#x4E0D;&#x6613;&#x7EF4;&#x62A4;&#x3002;</li>
+<li>&#x67E5;&#x8BE2;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x5C06;&#x7ED3;&#x679C;&#x96C6;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5C01;&#x88C5;&#x5230;&#x5B9E;&#x4F53;&#x5BF9;&#x8C61;&#x4E2D;&#x3002;</li>
+<li>&#x589E;&#x5220;&#x6539;&#x67E5;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x5C06;&#x5B9E;&#x4F53;&#x5BF9;&#x8C61;&#x7684;&#x6570;&#x636E;&#x8BBE;&#x7F6E;&#x5230; sql &#x8BED;&#x53E5;&#x7684;&#x5360;&#x4F4D;&#x7B26;&#x3002; &#xF06C;</li>
+</ol>
+</li>
+<li><p>&#x539F;&#x59CB; JDBC &#x7684;&#x64CD;&#x4F5C;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x65B9;&#x6848; </p>
+<p>&#x200B;    1.&#x4F7F;&#x7528;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x6C60;&#x521D;&#x59CB;&#x5316;&#x8FDE;&#x63A5;&#x8D44;&#x6E90;&#x3002; </p>
+<ol>
+<li>&#x5C06; sql &#x8BED;&#x53E5;&#x62BD;&#x53D6;&#x5230;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x3002; </li>
+<li>&#x4F7F;&#x7528;&#x53CD;&#x5C04;&#x3001;&#x5185;&#x7701;&#x7B49;&#x5E95;&#x5C42;&#x6280;&#x672F;&#xFF0C;&#x5C06;&#x5B9E;&#x4F53;&#x4E0E;&#x8868;&#x8FDB;&#x884C;&#x5C5E;&#x6027;&#x4E0E;&#x5B57;&#x6BB5;&#x7684;&#x81EA;&#x52A8;&#x6620;&#x5C04;    </li>
+</ol>
+</li>
+</ul>
+<h4 id="16-&#x4EC0;&#x4E48;&#x662F;mybatis"><a name="16-&#x4EC0;&#x4E48;&#x662F;mybatis" class="anchor-navigation-ex-anchor" href="#16-&#x4EC0;&#x4E48;&#x662F;mybatis"><i class="fa fa-link" aria-hidden="true"></i></a>1.6 &#x4EC0;&#x4E48;&#x662F;Mybatis</h4>
+<p>mybatis &#x662F;&#x4E00;&#x4E2A;&#x4F18;&#x79C0;&#x7684;&#x57FA;&#x4E8E;java&#x7684;&#x6301;&#x4E45;&#x5C42;&#x6846;&#x67B6;&#xFF0C;&#x5B83;&#x5185;&#x90E8;&#x5C01;&#x88C5;&#x4E86;jdbc&#xFF0C;&#x4F7F;&#x5F00;&#x53D1;&#x8005;&#x53EA;&#x9700;&#x8981;&#x5173;&#x6CE8;sql&#x8BED;&#x53E5;&#x672C;&#x8EAB;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x82B1;&#x8D39;&#x7CBE;&#x529B;&#x53BB;&#x5904;&#x7406;&#x52A0;&#x8F7D;&#x9A71;&#x52A8;&#x3001;&#x521B;&#x5EFA;&#x8FDE;&#x63A5;&#x3001;&#x521B;&#x5EFA;statement&#x7B49;&#x7E41;&#x6742;&#x7684;&#x8FC7;&#x7A0B;&#x3002;</p>
+<p>mybatis&#x901A;&#x8FC7;xml&#x6216;&#x6CE8;&#x89E3;&#x7684;&#x65B9;&#x5F0F;&#x5C06;&#x8981;&#x6267;&#x884C;&#x7684;&#x5404;&#x79CD; statement&#x914D;&#x7F6E;&#x8D77;&#x6765;&#xFF0C;&#x5E76;&#x901A;&#x8FC7;java&#x5BF9;&#x8C61;&#x548C;statement&#x4E2D;sql&#x7684;&#x52A8;&#x6001;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x6620;&#x5C04;&#x751F;&#x6210;&#x6700;&#x7EC8;&#x6267;&#x884C;&#x7684;sql&#x8BED;&#x53E5;&#x3002;</p>
+<p>&#x6700;&#x540E;mybatis&#x6846;&#x67B6;&#x6267;&#x884C;sql&#x5E76;&#x5C06;&#x7ED3;&#x679C;&#x6620;&#x5C04;&#x4E3A;java&#x5BF9;&#x8C61;&#x5E76;&#x8FD4;&#x56DE;&#x3002;&#x91C7;&#x7528;ORM&#x601D;&#x60F3;&#x89E3;&#x51B3;&#x4E86;&#x5B9E;&#x4F53;&#x548C;&#x6570;&#x636E;&#x5E93;&#x6620;&#x5C04;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5BF9;jdbc &#x8FDB;&#x884C;&#x4E86;&#x5C01;&#x88C5;&#xFF0C;&#x5C4F;&#x853D;&#x4E86;jdbc api &#x5E95;&#x5C42;&#x8BBF;&#x95EE;&#x7EC6;&#x8282;&#xFF0C;&#x4F7F;&#x6211;&#x4EEC;&#x4E0D;&#x7528;&#x4E0E;jdbc api &#x6253;&#x4EA4;&#x9053;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x7684;&#x6301;&#x4E45;&#x5316;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>MyBatis&#x5B98;&#x7F51;&#x5730;&#x5740;&#xFF1A;<a href="http://www.mybatis.org/mybatis-3/" target="_blank">http://www.mybatis.org/mybatis-3/</a> </p>
+<h4 id="17--mybatis&#x7684;&#x5FEB;&#x901F;&#x5165;&#x95E8;"><a name="17--mybatis&#x7684;&#x5FEB;&#x901F;&#x5165;&#x95E8;" class="anchor-navigation-ex-anchor" href="#17--mybatis&#x7684;&#x5FEB;&#x901F;&#x5165;&#x95E8;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7  Mybatis&#x7684;&#x5FEB;&#x901F;&#x5165;&#x95E8;</h4>
+<p><strong>MyBatis&#x5F00;&#x53D1;&#x6B65;&#x9AA4;&#xFF1A;</strong></p>
+<p>&#x2460;&#x6DFB;&#x52A0;MyBatis&#x7684;jar&#x5305;</p>
+<p>&#x2461;&#x521B;&#x5EFA;Student&#x6570;&#x636E;&#x8868;</p>
+<p>&#x2462;&#x7F16;&#x5199;Studentr&#x5B9E;&#x4F53;&#x7C7B; </p>
+<p>&#x2463;&#x7F16;&#x5199;&#x6620;&#x5C04;&#x6587;&#x4EF6;StudentMapper.xml</p>
+<p>&#x2464;&#x7F16;&#x5199;&#x6838;&#x5FC3;&#x6587;&#x4EF6;MyBatisConfig.xml</p>
+<p>&#x2465;&#x7F16;&#x5199;&#x6D4B;&#x8BD5;&#x7C7B;</p>
+<h5 id="171--&#x73AF;&#x5883;&#x642D;&#x5EFA;"><a name="171--&#x73AF;&#x5883;&#x642D;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#171--&#x73AF;&#x5883;&#x642D;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7.1  &#x73AF;&#x5883;&#x642D;&#x5EFA;</h5>
+<p>1)&#x5BFC;&#x5165;MyBatis&#x7684;jar&#x5305;</p>
+<ul>
+<li>mysql-connector-java-5.1.37-bin.jar</li>
+<li>mybatis-3.5.3.jar</li>
+<li>log4j-1.2.17.jar</li>
+</ul>
+<p>2)  &#x521B;&#x5EFA;student&#x6570;&#x636E;&#x8868;</p>
+<p><a href="1img/1590916243454.png" data-lightbox="432000e3-1aec-4cf0-9267-b036e44274cc" data-title="1590916243454"><img src="1img/1590916243454.png" alt="1590916243454"></a></p>
+<p>3) &#x7F16;&#x5199;Student&#x5B9E;&#x4F53;</p>
+<pre class="language-"><code class="lang-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">Integer</span> id<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Integer</span> age<span class="token punctuation">;</span>
+    <span class="token comment">//&#x7701;&#x7565;get&#x4E2A;set&#x65B9;&#x6CD5;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>4)&#x7F16;&#x5199;StudentMapper.xml&#x6620;&#x5C04;&#x6587;&#x4EF6;</p>
+<pre class="language-"><code class="lang-xml"><span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="token comment">&lt;!--MyBatis&#x7684;DTD&#x7EA6;&#x675F;--&gt;</span>
+<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">mapper</span>
+        <span class="token name">PUBLIC</span> <span class="token string">&quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span>
+        <span class="token string">&quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!--
+    mapper&#xFF1A;&#x6838;&#x5FC3;&#x6839;&#x6807;&#x7B7E;
+    namespace&#x5C5E;&#x6027;&#xFF1A;&#x540D;&#x79F0;&#x7A7A;&#x95F4;
+--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span> <span class="token attr-name">namespace</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>StudentMapper<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--
+        select&#xFF1A;&#x67E5;&#x8BE2;&#x529F;&#x80FD;&#x7684;&#x6807;&#x7B7E;
+        id&#x5C5E;&#x6027;&#xFF1A;&#x552F;&#x4E00;&#x6807;&#x8BC6;
+        resultType&#x5C5E;&#x6027;&#xFF1A;&#x6307;&#x5B9A;&#x7ED3;&#x679C;&#x6620;&#x5C04;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;
+        parameterType&#x5C5E;&#x6027;&#xFF1A;&#x6307;&#x5B9A;&#x53C2;&#x6570;&#x6620;&#x5C04;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;
+    --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>selectAll<span class="token punctuation">&quot;</span></span> <span class="token attr-name">resultType</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>student<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        SELECT * FROM student
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mapper</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>5) &#x7F16;&#x5199;MyBatis&#x6838;&#x5FC3;&#x6587;&#x4EF6;</p>
+<pre class="language-"><code class="lang-xml"><span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="token comment">&lt;!--MyBatis&#x7684;DTD&#x7EA6;&#x675F;--&gt;</span>
+<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">configuration</span> <span class="token name">PUBLIC</span> <span class="token string">&quot;-//mybatis.org//DTD Config 3.0//EN&quot;</span> <span class="token string">&quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!--configuration &#x6838;&#x5FC3;&#x6839;&#x6807;&#x7B7E;--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!--&#x5F15;&#x5165;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>properties</span> <span class="token attr-name">resource</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>jdbc.properties<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+
+    <span class="token comment">&lt;!--&#x914D;&#x7F6E;LOG4J--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>settings</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>setting</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>logImpl<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>log4j<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>settings</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!--&#x8D77;&#x522B;&#x540D;--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>typeAliases</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>typeAlias</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>com.itheima.bean.Student<span class="token punctuation">&quot;</span></span> <span class="token attr-name">alias</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>student<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+        <span class="token comment">&lt;!--&lt;package name=&quot;com.itheima.bean&quot;/&gt;--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>typeAliases</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!--environments&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x73AF;&#x5883;&#xFF0C;&#x73AF;&#x5883;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x3002;default&#x5C5E;&#x6027;&#x6307;&#x5B9A;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x54EA;&#x4E2A;--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>environments</span> <span class="token attr-name">default</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>mysql<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--environment&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x73AF;&#x5883;  id&#x5C5E;&#x6027;&#x552F;&#x4E00;&#x6807;&#x8BC6;--&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>environment</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>mysql<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!-- transactionManager&#x4E8B;&#x52A1;&#x7BA1;&#x7406;&#x3002;  type&#x5C5E;&#x6027;&#xFF0C;&#x91C7;&#x7528;JDBC&#x9ED8;&#x8BA4;&#x7684;&#x4E8B;&#x52A1;--&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>transactionManager</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>JDBC<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>transactionManager</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!-- dataSource&#x6570;&#x636E;&#x6E90;&#x4FE1;&#x606F;   type&#x5C5E;&#x6027; &#x8FDE;&#x63A5;&#x6C60;--&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dataSource</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>POOLED<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+                <span class="token comment">&lt;!-- property&#x83B7;&#x53D6;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F; --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>driver<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>${driver}<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>url<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>${url}<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>username<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>${username}<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>password<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>${password}<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dataSource</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>environment</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>environments</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!-- mappers&#x5F15;&#x5165;&#x6620;&#x5C04;&#x914D;&#x7F6E;&#x6587;&#x4EF6; --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mappers</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- mapper &#x5F15;&#x5165;&#x6307;&#x5B9A;&#x7684;&#x6620;&#x5C04;&#x914D;&#x7F6E;&#x6587;&#x4EF6;   resource&#x5C5E;&#x6027;&#x6307;&#x5B9A;&#x6620;&#x5C04;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x79F0; --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span> <span class="token attr-name">resource</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>StudentMapper.xml<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mappers</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h5 id="172&#x7F16;&#x5199;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;"><a name="172&#x7F16;&#x5199;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#172&#x7F16;&#x5199;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7.2&#x7F16;&#x5199;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;</h5>
+<pre class="language-"><code class="lang-java"><span class="token comment">/*
+    &#x63A7;&#x5236;&#x5C42;&#x6D4B;&#x8BD5;&#x7C7B;
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StudentController</span> <span class="token punctuation">{</span>
+    <span class="token comment">//&#x521B;&#x5EFA;&#x4E1A;&#x52A1;&#x5C42;&#x5BF9;&#x8C61;</span>
+    <span class="token keyword">private</span> <span class="token class-name">StudentService</span> service <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StudentServiceImpl</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//&#x67E5;&#x8BE2;&#x5168;&#x90E8;&#x529F;&#x80FD;&#x6D4B;&#x8BD5;</span>
+    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">selectAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span> students <span class="token operator">=</span> service<span class="token punctuation">.</span><span class="token function">selectAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">Student</span> stu <span class="token operator">:</span> students<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>stu<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="18-&#x77E5;&#x8BC6;&#x5C0F;&#x7ED3;"><a name="18-&#x77E5;&#x8BC6;&#x5C0F;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#18-&#x77E5;&#x8BC6;&#x5C0F;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>1.8 &#x77E5;&#x8BC6;&#x5C0F;&#x7ED3;</h4>
+<ul>
+<li><p>&#x6846;&#x67B6;       </p>
+<p> &#x6846;&#x67B6;&#x662F;&#x4E00;&#x6B3E;&#x534A;&#x6210;&#x54C1;&#x8F6F;&#x4EF6;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x57FA;&#x4E8E;&#x6846;&#x67B6;&#x7EE7;&#x7EED;&#x5F00;&#x53D1;&#xFF0C;&#x4ECE;&#x800C;&#x5B8C;&#x6210;&#x4E00;&#x4E9B;&#x4E2A;&#x6027;&#x5316;&#x7684;&#x9700;&#x6C42;&#x3002;</p>
+</li>
+<li><p>ORM        </p>
+<p>&#x5BF9;&#x8C61;&#x5173;&#x7CFB;&#x6620;&#x5C04;&#xFF0C;&#x6570;&#x636E;&#x548C;&#x5B9E;&#x4F53;&#x5BF9;&#x8C61;&#x7684;&#x6620;&#x5C04;&#x3002;</p>
+</li>
+<li><p>MyBatis       </p>
+<p> &#x662F;&#x4E00;&#x4E2A;&#x4F18;&#x79C0;&#x7684;&#x57FA;&#x4E8E; Java &#x7684;&#x6301;&#x4E45;&#x5C42;&#x6846;&#x67B6;&#xFF0C;&#x5B83;&#x5185;&#x90E8;&#x5C01;&#x88C5;&#x4E86; JDBC&#x3002;</p>
+</li>
+</ul>
+<h3 id="&#x4E8C;-mybatis&#x7684;&#x76F8;&#x5173;api"><a name="&#x4E8C;-mybatis&#x7684;&#x76F8;&#x5173;api" class="anchor-navigation-ex-anchor" href="#&#x4E8C;-mybatis&#x7684;&#x76F8;&#x5173;api"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. &#x4E8C;. MyBatis&#x7684;&#x76F8;&#x5173;api</h3>
+<h4 id="21-resources"><a name="21-resources" class="anchor-navigation-ex-anchor" href="#21-resources"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 Resources</h4>
+<ul>
+<li><p>org.apache.ibatis.io.Resources&#xFF1A;&#x52A0;&#x8F7D;&#x8D44;&#x6E90;&#x7684;&#x5DE5;&#x5177;&#x7C7B;&#x3002;</p>
+</li>
+<li><p>&#x6838;&#x5FC3;&#x65B9;&#x6CD5;</p>
+<p><a href="1img/1590917572321.png" data-lightbox="b3a455f5-312b-4f16-8f5b-365fb5e05274" data-title="1590917572321"><img src="1img/1590917572321.png" alt="1590917572321"></a></p>
+</li>
+</ul>
+<h4 id="22-&#x6784;&#x5EFA;&#x5668;sqlsessionfactorybuilder"><a name="22-&#x6784;&#x5EFA;&#x5668;sqlsessionfactorybuilder" class="anchor-navigation-ex-anchor" href="#22-&#x6784;&#x5EFA;&#x5668;sqlsessionfactorybuilder"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 &#x6784;&#x5EFA;&#x5668;SqlSessionFactoryBuilder</h4>
+<ul>
+<li><p>org.apache.ibatis.session.SqlSessionFactoryBuilder&#xFF1A;&#x83B7;&#x53D6; SqlSessionFactory &#x5DE5;&#x5382;&#x5BF9;&#x8C61;&#x7684;&#x529F;&#x80FD;&#x7C7B;</p>
+</li>
+<li><p>&#x6838;&#x5FC3;&#x65B9;&#x6CD5;</p>
+<p><a href="1img/1590916852504.png" data-lightbox="5c397d01-01ce-45ea-9af7-a1fbcdf7109b" data-title="1590916852504"><img src="1img/1590916852504.png" alt="1590916852504"></a></p>
+</li>
+<li><p>&#x901A;&#x8FC7;&#x52A0;&#x8F7D;mybatis&#x7684;&#x6838;&#x5FC3;&#x6587;&#x4EF6;&#x7684;&#x8F93;&#x5165;&#x6D41;&#x7684;&#x5F62;&#x5F0F;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;SqlSessionFactory&#x5BF9;&#x8C61;</p>
+</li>
+</ul>
+<pre class="language-"><code class="lang-java"><span class="token class-name">String</span> resource <span class="token operator">=</span> <span class="token string">&quot;org/mybatis/builder/mybatis-config.xml&quot;</span><span class="token punctuation">;</span> 
+<span class="token class-name">InputStream</span> inputStream <span class="token operator">=</span> <span class="token class-name">Resources</span><span class="token punctuation">.</span><span class="token function">getResourceAsStream</span><span class="token punctuation">(</span>resource<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token class-name">SqlSessionFactoryBuilder</span> builder <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SqlSessionFactoryBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token class-name">SqlSessionFactory</span> factory <span class="token operator">=</span> builder<span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span>inputStream<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x5176;&#x4E2D;&#xFF0C; Resources &#x5DE5;&#x5177;&#x7C7B;&#xFF0C;&#x8FD9;&#x4E2A;&#x7C7B;&#x5728; org.apache.ibatis.io &#x5305;&#x4E2D;&#x3002;Resources &#x7C7B;&#x5E2E;&#x52A9;&#x4F60;&#x4ECE;&#x7C7B;&#x8DEF;&#x5F84;&#x4E0B;&#x3001;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x6216;&#x4E00;&#x4E2A; web URL &#x4E2D;&#x52A0;&#x8F7D;&#x8D44;&#x6E90;&#x6587;&#x4EF6;&#x3002;</p>
+<h4 id="23-&#x5DE5;&#x5382;&#x5BF9;&#x8C61;sqlsessionfactory"><a name="23-&#x5DE5;&#x5382;&#x5BF9;&#x8C61;sqlsessionfactory" class="anchor-navigation-ex-anchor" href="#23-&#x5DE5;&#x5382;&#x5BF9;&#x8C61;sqlsessionfactory"><i class="fa fa-link" aria-hidden="true"></i></a>2.3 &#x5DE5;&#x5382;&#x5BF9;&#x8C61;SqlSessionFactory</h4>
+<ul>
+<li><p>org.apache.ibatis.session.SqlSessionFactory&#xFF1A;&#x83B7;&#x53D6; SqlSession &#x6784;&#x5EFA;&#x8005;&#x5BF9;&#x8C61;&#x7684;&#x5DE5;&#x5382;&#x63A5;&#x53E3;&#x3002;</p>
+</li>
+<li><p>&#x6838;&#x5FC3;api</p>
+<p><a href="1img/1590917006637.png" data-lightbox="3b411a71-7c3f-47bf-b574-41619a60b6ae" data-title="1590917006637"><img src="1img/1590917006637.png" alt="1590917006637"></a></p>
+</li>
+</ul>
+<h4 id="24-sqlsession&#x4F1A;&#x8BDD;&#x5BF9;&#x8C61;"><a name="24-sqlsession&#x4F1A;&#x8BDD;&#x5BF9;&#x8C61;" class="anchor-navigation-ex-anchor" href="#24-sqlsession&#x4F1A;&#x8BDD;&#x5BF9;&#x8C61;"><i class="fa fa-link" aria-hidden="true"></i></a>2.4 SqlSession&#x4F1A;&#x8BDD;&#x5BF9;&#x8C61;</h4>
+<ul>
+<li><p>org.apache.ibatis.session.SqlSession&#xFF1A;&#x6784;&#x5EFA;&#x8005;&#x5BF9;&#x8C61;&#x63A5;&#x53E3;&#x3002;&#x7528;&#x4E8E;&#x6267;&#x884C; SQL&#x3001;&#x7BA1;&#x7406;&#x4E8B;&#x52A1;&#x3001;&#x63A5;&#x53E3;&#x4EE3;&#x7406;&#x3002;</p>
+</li>
+<li><p>&#x6838;&#x5FC3;api</p>
+<p><a href="1img/1590917052849.png" data-lightbox="5b6bd07a-04a6-4367-8d89-c234e343c3fc" data-title="1590917052849"><img src="1img/1590917052849.png" alt="1590917052849"></a></p>
+</li>
+</ul>
+<p>SqlSession &#x5B9E;&#x4F8B;&#x5728; MyBatis &#x4E2D;&#x662F;&#x975E;&#x5E38;&#x5F3A;&#x5927;&#x7684;&#x4E00;&#x4E2A;&#x7C7B;&#x3002;&#x5728;&#x8FD9;&#x91CC;&#x4F60;&#x4F1A;&#x770B;&#x5230;&#x6240;&#x6709;&#x6267;&#x884C;&#x8BED;&#x53E5;&#x3001;&#x63D0;&#x4EA4;&#x6216;&#x56DE;&#x6EDA;&#x4E8B;&#x52A1;&#x548C;&#x83B7;&#x53D6;&#x6620;&#x5C04;&#x5668;&#x5B9E;&#x4F8B;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<h3 id="&#x4E09;mybatis-&#x6620;&#x5C04;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><a name="&#x4E09;mybatis-&#x6620;&#x5C04;&#x914D;&#x7F6E;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x4E09;mybatis-&#x6620;&#x5C04;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. &#x4E09;.MyBatis &#x6620;&#x5C04;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h3>
+<h4 id="31-&#x6620;&#x5C04;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4ECB;&#x7ECD;"><a name="31-&#x6620;&#x5C04;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#31-&#x6620;&#x5C04;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1 &#x6620;&#x5C04;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4ECB;&#x7ECD;</h4>
+<ul>
+<li><p>&#x6620;&#x5C04;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x4E86;&#x6570;&#x636E;&#x548C;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x7684;&#x6620;&#x5C04;&#x5173;&#x7CFB;&#x4EE5;&#x53CA;&#x8981;&#x6267;&#x884C;&#x7684; SQL &#x8BED;&#x53E5;</p>
+<p><a href="1img/1590917306615.png" data-lightbox="a461eaab-00ca-410c-8848-b603b3c0927b" data-title="1590917306615"><img src="1img/1590917306615.png" alt="1590917306615"></a></p>
+</li>
+</ul>
+<h4 id="32-&#x67E5;&#x8BE2;&#x529F;&#x80FD;"><a name="32-&#x67E5;&#x8BE2;&#x529F;&#x80FD;" class="anchor-navigation-ex-anchor" href="#32-&#x67E5;&#x8BE2;&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2 &#x67E5;&#x8BE2;&#x529F;&#x80FD;</h4>
+<ul>
+<li><p><select>&#xFF1A;&#x67E5;&#x8BE2;&#x529F;&#x80FD;&#x6807;&#x7B7E;&#x3002;</select></p>
+</li>
+<li><p>&#x5C5E;&#x6027;        </p>
+<p> id&#xFF1A;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#xFF0C; &#x914D;&#x5408;&#x540D;&#x79F0;&#x7A7A;&#x95F4;&#x4F7F;&#x7528;&#x3002;     </p>
+<p> parameterType&#xFF1A;&#x6307;&#x5B9A;&#x53C2;&#x6570;&#x6620;&#x5C04;&#x7684;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x3002;       </p>
+<p> resultType&#xFF1A;&#x6307;&#x5B9A;&#x7ED3;&#x679C;&#x6620;&#x5C04;&#x7684;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x3002;</p>
+</li>
+<li><p>SQL &#x83B7;&#x53D6;&#x53C2;&#x6570;:        #{&#x5C5E;&#x6027;&#x540D;}</p>
+</li>
+<li><p>&#x793A;&#x4F8B;</p>
+<p><a href="1img/1590917699865.png" data-lightbox="ceff6508-3793-4d7e-a615-aab65b58c4ef" data-title="1590917699865"><img src="1img/1590917699865.png" alt="1590917699865"></a></p>
+</li>
+</ul>
+<h4 id="33-&#x65B0;&#x589E;&#x529F;&#x80FD;"><a name="33-&#x65B0;&#x589E;&#x529F;&#x80FD;" class="anchor-navigation-ex-anchor" href="#33-&#x65B0;&#x589E;&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3 &#x65B0;&#x589E;&#x529F;&#x80FD;</h4>
+<ul>
+<li><p><insert>&#xFF1A;&#x65B0;&#x589E;&#x529F;&#x80FD;&#x6807;&#x7B7E;&#x3002;</insert></p>
+</li>
+<li><p>&#x5C5E;&#x6027;        </p>
+<p>id&#xFF1A;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#xFF0C; &#x914D;&#x5408;&#x540D;&#x79F0;&#x7A7A;&#x95F4;&#x4F7F;&#x7528;&#x3002;     </p>
+<p>parameterType&#xFF1A;&#x6307;&#x5B9A;&#x53C2;&#x6570;&#x6620;&#x5C04;&#x7684;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x3002;       </p>
+<p>resultType&#xFF1A;&#x6307;&#x5B9A;&#x7ED3;&#x679C;&#x6620;&#x5C04;&#x7684;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x3002;</p>
+</li>
+<li><p>SQL &#x83B7;&#x53D6;&#x53C2;&#x6570;:        #{&#x5C5E;&#x6027;&#x540D;}</p>
+</li>
+<li><p>&#x793A;&#x4F8B;</p>
+</li>
+</ul>
+<p><a href="1img/1590918390112.png" data-lightbox="d7014119-eac4-4282-bcd1-e413921199b4" data-title="1590918390112"><img src="1img/1590918390112.png" alt="1590918390112"></a></p>
+<h4 id="34-&#x4FEE;&#x6539;&#x529F;&#x80FD;"><a name="34-&#x4FEE;&#x6539;&#x529F;&#x80FD;" class="anchor-navigation-ex-anchor" href="#34-&#x4FEE;&#x6539;&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>3.4 &#x4FEE;&#x6539;&#x529F;&#x80FD;</h4>
+<ul>
+<li><p><update>&#xFF1A;&#x4FEE;&#x6539;&#x529F;&#x80FD;&#x6807;&#x7B7E;&#x3002;</update></p>
+</li>
+<li><p>&#x5C5E;&#x6027;        </p>
+<p>id&#xFF1A;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#xFF0C; &#x914D;&#x5408;&#x540D;&#x79F0;&#x7A7A;&#x95F4;&#x4F7F;&#x7528;&#x3002;     </p>
+<p>parameterType&#xFF1A;&#x6307;&#x5B9A;&#x53C2;&#x6570;&#x6620;&#x5C04;&#x7684;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x3002;       </p>
+<p>resultType&#xFF1A;&#x6307;&#x5B9A;&#x7ED3;&#x679C;&#x6620;&#x5C04;&#x7684;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x3002;</p>
+</li>
+<li><p>SQL &#x83B7;&#x53D6;&#x53C2;&#x6570;:        #{&#x5C5E;&#x6027;&#x540D;}</p>
+</li>
+<li><p>&#x793A;&#x4F8B;</p>
+</li>
+</ul>
+<p><a href="1img/1590918538863.png" data-lightbox="719034f7-b0f8-4c2f-805c-3d6e719329a4" data-title="1590918538863"><img src="1img/1590918538863.png" alt="1590918538863"></a></p>
+<h4 id="35-&#x5220;&#x9664;&#x529F;&#x80FD;"><a name="35-&#x5220;&#x9664;&#x529F;&#x80FD;" class="anchor-navigation-ex-anchor" href="#35-&#x5220;&#x9664;&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>3.5 &#x5220;&#x9664;&#x529F;&#x80FD;</h4>
+<ul>
+<li><p><delete>&#xFF1A;&#x67E5;&#x8BE2;&#x529F;&#x80FD;&#x6807;&#x7B7E;&#x3002;</delete></p>
+</li>
+<li><p>&#x5C5E;&#x6027;        </p>
+<p>id&#xFF1A;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#xFF0C; &#x914D;&#x5408;&#x540D;&#x79F0;&#x7A7A;&#x95F4;&#x4F7F;&#x7528;&#x3002;     </p>
+<p>parameterType&#xFF1A;&#x6307;&#x5B9A;&#x53C2;&#x6570;&#x6620;&#x5C04;&#x7684;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x3002;       </p>
+<p>resultType&#xFF1A;&#x6307;&#x5B9A;&#x7ED3;&#x679C;&#x6620;&#x5C04;&#x7684;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x3002;</p>
+</li>
+<li><p>SQL &#x83B7;&#x53D6;&#x53C2;&#x6570;:        #{&#x5C5E;&#x6027;&#x540D;}</p>
+</li>
+<li><p>&#x793A;&#x4F8B;</p>
+<p><a href="1img/1590918458329.png" data-lightbox="ad4b08e7-3aef-48bc-8762-bf23e0f35bde" data-title="1590918458329"><img src="1img/1590918458329.png" alt="1590918458329"></a></p>
+</li>
+<li><p>&#x603B;&#x7ED3;&#xFF1A; &#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;crud&#x64CD;&#x4F5C;&#xFF0C;&#x9664;&#x4E86;&#x6807;&#x7B7E;&#x540D;&#x79F0;&#x4EE5;&#x53CA;sql&#x8BED;&#x53E5;&#x4E0D;&#x4E00;&#x6837;&#x4E4B;&#x5916;&#xFF0C;&#x5176;&#x4ED6;&#x5C5E;&#x6027;&#x53C2;&#x6570;&#x57FA;&#x672C;&#x4E00;&#x81F4;&#x3002;</p>
+</li>
+</ul>
+<h4 id="36-&#x6620;&#x5C04;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5C0F;&#x7ED3;"><a name="36-&#x6620;&#x5C04;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5C0F;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#36-&#x6620;&#x5C04;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5C0F;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>3.6 &#x6620;&#x5C04;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5C0F;&#x7ED3;</h4>
+<p><a href="1img/1590918743943.png" data-lightbox="68e2ed17-d647-4c95-9fb9-01647e98027a" data-title="1590918743943"><img src="1img/1590918743943.png" alt="1590918743943"></a></p>
+<h3 id="&#x56DB;mybatis&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4ECB;&#x7ECD;"><a name="&#x56DB;mybatis&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x56DB;mybatis&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.4. &#x56DB;.Mybatis&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4ECB;&#x7ECD;</h3>
+<h4 id="41-&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4ECB;&#x7ECD;"><a name="41-&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#41-&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1 &#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4ECB;&#x7ECD;</h4>
+<p>&#x6838;&#x5FC3;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x4E86; MyBatis &#x6700;&#x6838;&#x5FC3;&#x7684;&#x8BBE;&#x7F6E;&#x548C;&#x5C5E;&#x6027;&#x4FE1;&#x606F;&#x3002;&#x5982;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8FDE;&#x63A5;&#x3001;&#x4E8B;&#x52A1;&#x3001;&#x8FDE;&#x63A5;&#x6C60;&#x4FE1;&#x606F;&#x7B49;&#x3002;</p>
+<p>&#x5982;&#x4E0B;&#x56FE;:</p>
+<pre class="language-"><code class="lang-xml"><span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span class="token comment">&lt;!--MyBatis&#x7684;DTD&#x7EA6;&#x675F;--&gt;</span>
+<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">configuration</span> <span class="token name">PUBLIC</span> <span class="token string">&quot;-//mybatis.org//DTD Config 3.0//EN&quot;</span> <span class="token string">&quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!--configuration &#x6838;&#x5FC3;&#x6839;&#x6807;&#x7B7E;--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>configuration</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!--environments&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x73AF;&#x5883;&#xFF0C;&#x73AF;&#x5883;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x3002;default&#x5C5E;&#x6027;&#x6307;&#x5B9A;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x54EA;&#x4E2A;--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>environments</span> <span class="token attr-name">default</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>mysql<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!--environment&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x73AF;&#x5883;  id&#x5C5E;&#x6027;&#x552F;&#x4E00;&#x6807;&#x8BC6;--&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>environment</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>mysql<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!-- transactionManager&#x4E8B;&#x52A1;&#x7BA1;&#x7406;&#x3002;  type&#x5C5E;&#x6027;&#xFF0C;&#x91C7;&#x7528;JDBC&#x9ED8;&#x8BA4;&#x7684;&#x4E8B;&#x52A1;--&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>transactionManager</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>JDBC<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>transactionManager</span><span class="token punctuation">&gt;</span></span>
+            <span class="token comment">&lt;!-- dataSource&#x6570;&#x636E;&#x6E90;&#x4FE1;&#x606F;   type&#x5C5E;&#x6027; &#x8FDE;&#x63A5;&#x6C60;--&gt;</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dataSource</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>POOLED<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+                <span class="token comment">&lt;!-- property&#x83B7;&#x53D6;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F; --&gt;</span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>driver<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>com.mysql.jdbc.Driver<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>url<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>jdbc:mysql:///db1<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>username<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>root<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>password<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>root<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dataSource</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>environment</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>environments</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!-- mappers&#x5F15;&#x5165;&#x6620;&#x5C04;&#x914D;&#x7F6E;&#x6587;&#x4EF6; --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mappers</span><span class="token punctuation">&gt;</span></span>
+        <span class="token comment">&lt;!-- mapper &#x5F15;&#x5165;&#x6307;&#x5B9A;&#x7684;&#x6620;&#x5C04;&#x914D;&#x7F6E;&#x6587;&#x4EF6;   resource&#x5C5E;&#x6027;&#x6307;&#x5B9A;&#x6620;&#x5C04;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x79F0; --&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mapper</span> <span class="token attr-name">resource</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>StudentMapper.xml<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mappers</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>configuration</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h4 id="42-&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5F15;&#x5165;"><a name="42-&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5F15;&#x5165;" class="anchor-navigation-ex-anchor" href="#42-&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5F15;&#x5165;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2 &#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5F15;&#x5165;</h4>
+<ul>
+<li><p>properties&#x6807;&#x7B7E;&#x5F15;&#x5165;&#x5916;&#x90E8;&#x6587;&#x4EF6;</p>
+<pre class="language-"><code class="lang-xml">    <span class="token comment">&lt;!--&#x5F15;&#x5165;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>properties</span> <span class="token attr-name">resource</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>jdbc.properties<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+</code></pre>
+</li>
+<li><p>&#x5177;&#x4F53;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x4E0B;&#x914D;&#x7F6E;</p>
+<pre class="language-"><code class="lang-xml">  <span class="token comment">&lt;!-- property&#x83B7;&#x53D6;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F; --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>driver<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>${driver}<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>url<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>${url}<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>username<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>${username}<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>password<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>${password}<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre>
+</li>
+</ul>
+<h4 id="43-&#x8D77;&#x522B;&#x540D;"><a name="43-&#x8D77;&#x522B;&#x540D;" class="anchor-navigation-ex-anchor" href="#43-&#x8D77;&#x522B;&#x540D;"><i class="fa fa-link" aria-hidden="true"></i></a>4.3 &#x8D77;&#x522B;&#x540D;</h4>
+<ul>
+<li><p><typealiases>&#xFF1A;&#x4E3A;&#x5168;&#x7C7B;&#x540D;&#x8D77;&#x522B;&#x540D;&#x7684;&#x7236;&#x6807;&#x7B7E;&#x3002;</typealiases></p>
+</li>
+<li><p><typealias>&#xFF1A;&#x4E3A;&#x5168;&#x7C7B;&#x540D;&#x8D77;&#x522B;&#x540D;&#x7684;&#x5B50;&#x6807;&#x7B7E;&#x3002;</typealias></p>
+</li>
+<li><p>&#x5C5E;&#x6027;      </p>
+<p> type&#xFF1A;&#x6307;&#x5B9A;&#x5168;&#x7C7B;&#x540D;      </p>
+<p> alias&#xFF1A;&#x6307;&#x5B9A;&#x522B;&#x540D;</p>
+</li>
+<li><p><package>&#xFF1A;&#x4E3A;&#x6307;&#x5B9A;&#x5305;&#x4E0B;&#x6240;&#x6709;&#x7C7B;&#x8D77;&#x522B;&#x540D;&#x7684;&#x5B50;&#x6807;&#x7B7E;&#x3002;(&#x522B;&#x540D;&#x5C31;&#x662F;&#x7C7B;&#x540D;)</package></p>
+</li>
+<li><p>&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<p><a href="1img/1590919106324.png" data-lightbox="0ef8ef54-e491-44d6-b4f2-e5d589114902" data-title="1590919106324"><img src="1img/1590919106324.png" alt="1590919106324"></a></p>
+</li>
+<li><p>&#x5177;&#x4F53;&#x5982;&#x4E0B;&#x914D;&#x7F6E;</p>
+<pre class="language-"><code class="lang-xml">    <span class="token comment">&lt;!--&#x8D77;&#x522B;&#x540D;--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>typeAliases</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>typeAlias</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>com.itheima.bean.Student<span class="token punctuation">&quot;</span></span> <span class="token attr-name">alias</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>student<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+        <span class="token comment">&lt;!--&lt;package name=&quot;com.itheima.bean&quot;/&gt;--&gt;</span>
+    &lt;/typeAliase
+</code></pre>
+</li>
+</ul>
+<h4 id="44-&#x603B;&#x7ED3;"><a name="44-&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#44-&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>4.4 &#x603B;&#x7ED3;</h4>
+<p><a href="1img/1590919367790.png" data-lightbox="c3f05543-bbe3-4d8b-bbf9-a75028a8f2a0" data-title="1590919367790"><img src="1img/1590919367790.png" alt="1590919367790"></a></p>
+<h3 id="&#x4E94;mybatis&#x4F20;&#x7EDF;&#x65B9;&#x5F0F;&#x5F00;&#x53D1;"><a name="&#x4E94;mybatis&#x4F20;&#x7EDF;&#x65B9;&#x5F0F;&#x5F00;&#x53D1;" class="anchor-navigation-ex-anchor" href="#&#x4E94;mybatis&#x4F20;&#x7EDF;&#x65B9;&#x5F0F;&#x5F00;&#x53D1;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.5. &#x4E94;.Mybatis&#x4F20;&#x7EDF;&#x65B9;&#x5F0F;&#x5F00;&#x53D1;</h3>
+<h4 id="51-dao-&#x5C42;&#x4F20;&#x7EDF;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;"><a name="51-dao-&#x5C42;&#x4F20;&#x7EDF;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#51-dao-&#x5C42;&#x4F20;&#x7EDF;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1 Dao &#x5C42;&#x4F20;&#x7EDF;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;</h4>
+<ul>
+<li><p>&#x5206;&#x5C42;&#x601D;&#x60F3;&#xFF1A;&#x63A7;&#x5236;&#x5C42;(controller)&#x3001;&#x4E1A;&#x52A1;&#x5C42;(service)&#x3001;&#x6301;&#x4E45;&#x5C42;(dao)&#x3002;</p>
+</li>
+<li><p>&#x8C03;&#x7528;&#x6D41;&#x7A0B;</p>
+<p><a href="1img/1590919558066.png" data-lightbox="f8b58410-cf88-4f79-94fc-aeed53ef6152" data-title="1590919558066"><img src="1img/1590919558066.png" alt="1590919558066"></a></p>
+</li>
+</ul>
+<h4 id="52-log4j&#x7684;&#x914D;&#x7F6E;&#x548C;&#x4F7F;&#x7528;"><a name="52-log4j&#x7684;&#x914D;&#x7F6E;&#x548C;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#52-log4j&#x7684;&#x914D;&#x7F6E;&#x548C;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>5.2 LOG4J&#x7684;&#x914D;&#x7F6E;&#x548C;&#x4F7F;&#x7528;</h4>
+<ul>
+<li><p>&#x5728;&#x65E5;&#x5E38;&#x5F00;&#x53D1;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6392;&#x67E5;&#x95EE;&#x9898;&#x65F6;&#x96BE;&#x514D;&#x9700;&#x8981;&#x8F93;&#x51FA; MyBatis &#x771F;&#x6B63;&#x6267;&#x884C;&#x7684; SQL &#x8BED;&#x53E5;&#x3001;&#x53C2;&#x6570;&#x3001;&#x7ED3;&#x679C;&#x7B49;&#x4FE1;&#x606F;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x501F;&#x52A9; LOG4J &#x7684;&#x529F;&#x80FD;&#x6765;&#x5B9E;&#x73B0;&#x6267;&#x884C;&#x4FE1;&#x606F;&#x7684;&#x8F93;&#x51FA;&#x3002;</p>
+</li>
+<li><p>&#x4F7F;&#x7528;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<p><a href="1img/1590919638466.png" data-lightbox="5452ed97-19a8-4b52-b014-47b586884211" data-title="1590919638466"><img src="1img/1590919638466.png" alt="1590919638466"></a></p>
+</li>
+</ul>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; MISIN 2022 | <a href="https://beian.miit.gov.cn/" text-decoration:none="" target="_blank">&#x8C6B;ICP&#x5907;2021006345&#x53F7;-1</a> all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-11-10 10:54:42
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="mybatis-day02.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Mybatis Day 02">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"typora-copy-images-to":"1img","title":"Mybatis Day 01","level":"1.3.9.1","depth":3,"next":{"title":"Mybatis Day 02","level":"1.3.9.2","depth":3,"path":"2.JavaWeb/6.Mybatis/mybatis-day02.md","ref":"2.JavaWeb/6.Mybatis/mybatis-day02.md","articles":[]},"previous":{"title":"6.Mybatis","level":"1.3.9","depth":2,"ref":"","articles":[{"title":"Mybatis Day 01","level":"1.3.9.1","depth":3,"path":"2.JavaWeb/6.Mybatis/mybatis-day01.md","ref":"2.JavaWeb/6.Mybatis/mybatis-day01.md","articles":[]},{"title":"Mybatis Day 02","level":"1.3.9.2","depth":3,"path":"2.JavaWeb/6.Mybatis/mybatis-day02.md","ref":"2.JavaWeb/6.Mybatis/mybatis-day02.md","articles":[]},{"title":"Mybatis Day 03","level":"1.3.9.3","depth":3,"path":"2.JavaWeb/6.Mybatis/mybatis-day03.md","ref":"2.JavaWeb/6.Mybatis/mybatis-day03.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","expandable-chapters-small","sidebar-style","splitter","anchor-navigation-ex","back-to-top-button","code","prism","github@2.0.0","github-edit","-sharing","sharing-plus","donate","-lunr","-search","search-pro","tbfed-pagefooter","change_girls","lightbox","favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sidebar-style":{"title":"《BIG DATA》","author":"MISIN GUO"},"tbfed-pagefooter":{"copyright":"Copyright &copy MISIN 2022 | <a href=\"https://beian.miit.gov.cn/\" text-decoration:none target=\"_blank\">豫ICP备2021006345号-1</a>","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"lang":{"flow":"java"},"css":["prismjs/themes/prism-solarizedlight.css"]},"github":{"url":"https://github.com/MisinGuo/bigdata"},"splitter":{},"change_girls":{"time":10,"urls":["https://misinguo.github.io/eternity/screen/1.jpg","https://misinguo.github.io/eternity/screen/2.jpg","https://misinguo.github.io/eternity/screen/3.jpg"]},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"title":"小乞丐特可怜🥺","button":"打赏","wechat":"https://misinguo.github.io/eternity/wechat.jpg","alipay":"https://misinguo.github.io/eternity/payment.jpg","wechatText":"微信","alipayText":"支付宝"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-edit":{"repo":"MisinGuo/bigdata","branch":"master"},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":false,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":{"shortcut":"fav/favicon.ico","bookmark":"fav/favicon.ico","appleTouch":"fav/apple-touch-icon.png","appleTouchMore":{"120x120":"fav/apple-touch-icon-120x120.png","180x180":"fav/apple-touch-icon-180x180.png"}},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"expandable-chapters-small":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":false,"facebook":false,"weibo":false,"twitter":false,"pocket":false,"google":false,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"黑马程序员吧","lang":"zh-cn","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"图书编号有啥用","variables":{"themeLou":{}},"title":"《BIG DATA》","gitbook":"*","description":"啥"},"file":{"path":"2.JavaWeb/6.Mybatis/mybatis-day01.md","mtime":"2022-11-10T02:54:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-16T04:15:51.490Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sidebar-style/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-edit/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-change_girls/girls.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
